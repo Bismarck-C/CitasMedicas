@@ -11,6 +11,7 @@ package com.una.citasmedicas.controller.usuario;
 public interface UsuarioInterface {
     public String agregar(String []data);
     public String modificar(String usuario,String[] data);
-    public String eliminar(String usuario);
+    public String eliminar(String user);
     public void mostrar();
+    public String[] getByUser(String user);
 }

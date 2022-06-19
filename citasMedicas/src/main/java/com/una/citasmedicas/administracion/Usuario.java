@@ -4,80 +4,59 @@
  */
 package com.una.citasmedicas.administracion;
 
-import com.una.citasmedicas.model.Persona;
+import java.io.Serializable;
+
 
 /**
  *
  * @author Eithel
  */
-public class Usuario extends Persona {
+public class Usuario implements Serializable {
     private String nombreUsuario;
     private String password;
-
-   public Usuario(String[] data) {
-        super();
-        this.setCedula(data[0]);
-        this.setNombre(data[1]);
-        this.setApellidos(data[2]);
-        this.setTelefono(data[3]);
-        this.setCorreo(data[4]);
-        this.setDireccion(data[5]);
-        this.setFechaNacimiento(data[6]);
-        this.nombreUsuario = data[7];
-        this.password = data[8];
-        
-   }
-    public Usuario(){
-        super();
-        
-    }
-
+    private String nombreCompleto;
+    private String apellido;
+    private String cedula;
+    private String email;
+    private String telefono;
    
-
-     public boolean update(String[] data){
-         
-        
-        this.setNombre(data[0]);
-        this.setApellidos(data[1]);
-        this.setTelefono(data[2]);
-        this.setCorreo(data[3]);
-        this.setDireccion(data[4]);
-        this.setFechaNacimiento(data[5]);
-         
-        
-        
-        return true;
-    }
+    
+    public Usuario (String []data){
      
-    @Override
-     public String toString(){
+       this.cedula = data[0];
+       this.nombreCompleto = data[1];
+       this.apellido = data[2];
+       this.telefono = data[3];
+       this.email = data[4];
+       this.nombreUsuario = data[5];
+       this.password = data[6];
        
-        System.out.println("====================================");
-        System.out.println("||        Usuario: "+this.getNombreUsuario());
-        System.out.println("||        Cedula: "+this.getCedula());
-        System.out.println("||        Nombre:"+this.getNombre());
-        System.out.println("||        Apellido: "+this.getApellidos());
-        System.out.println("||        Telefono:"+this.getTelefono());
-        System.out.println("||        Email: "+this.getCorreo());
-        System.out.println("||        Direccion: "+this.getDireccion());
-        System.out.println("||        Fecha de nacimiento: "+this.getFechaNacimiento());
-        System.out.println("====================================");
-        
-        return null;
-     }
-
+    
+    }
+    public boolean update(String[] data){
+       
+       this.nombreCompleto = data[0];
+       this.apellido = data[1];
+       this.cedula = data[2];
+       this.email = data[3];
+       this.telefono = data[4];
+     
+       
+       return true;
+    
+    }
     /**
-     * @return the NombreUsuario
+     * @return the nombreUsuario
      */
     public String getNombreUsuario() {
         return nombreUsuario;
     }
 
     /**
-     * @param NombreUsuario the NombreUsuario to set
+     * @param nombreUsuario the nombreUsuario to set
      */
-    public void setNombreUsuario(String NombreUsuario) {
-        this.nombreUsuario = NombreUsuario;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     /**
@@ -93,4 +72,91 @@ public class Usuario extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    /**
+     * @return the nombreCompleto
+     */
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    /**
+     * @param nombreCompleto the nombreCompleto to set
+     */
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * @return the telefono
+     */
+    public String getTelefono() {
+        return telefono;
+    }
+
+    /**
+     * @param telefono the telefono to set
+     */
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    
+    
+    public String toString(){
+       
+        System.out.println("====================================");
+        System.out.println("||        Usuario: "+this.getNombreUsuario());
+        System.out.println("||        Cedula: "+this.getCedula());
+        System.out.println("||        Nombre: "+this.getNombreCompleto());
+        System.out.println("||        Apellido: "+this.getApellido());
+        System.out.println("||        Email: "+this.getEmail());
+        System.out.println("||        Telefono: "+this.getTelefono());
+        System.out.println("====================================");
+        
+        return null;
+    }
+
+    /**
+     * @return the apellido
+     */
+    public String getApellido() {
+        return apellido;
+    }
+
+    /**
+     * @param apellido the apellido to set
+     */
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    /**
+     * @return the cedula
+     */
+    public String getCedula() {
+        return cedula;
+    }
+
+    /**
+     * @param cedula the cedula to set
+     */
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+    
 }

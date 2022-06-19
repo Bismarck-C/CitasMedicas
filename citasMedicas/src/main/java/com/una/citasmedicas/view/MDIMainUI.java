@@ -16,8 +16,8 @@ import com.una.citasmedicas.view.medicos.FrmBuscarMedico;
 import com.una.citasmedicas.view.medicos.FrmEliminarMedico;
 import com.una.citasmedicas.view.medicos.FrmModificarMedico;
 
-//import com.una.citasmedicas.view.usuarios.FrmAgregarUsuario;
-//import com.una.citasmedicas.view.usuarios.FrmEliminarUsuario;
+import com.una.citasmedicas.view.usuarios.FrmAgregarUsuario;
+import com.una.citasmedicas.view.usuarios.FrmEliminarUsuario;
 import com.una.citasmedicas.view.usuarios.FrmModificarUsuario;
 
 /**
@@ -37,8 +37,8 @@ public class MDIMainUI extends javax.swing.JFrame {
     FrmDeletePaciente frmEliminarPaciente;
     
 
-    //FrmEliminarUsuario frmEliminarUsuario;
-    //FrmAgregarUsuario frmAgregarUsuario;
+    FrmEliminarUsuario frmEliminarUsuario;
+    FrmAgregarUsuario frmAgregarUsuario;
     FrmModificarUsuario frmModificarUsuario;
     /**
      * Creates new form MDIMainUI
@@ -56,8 +56,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmEliminarPaciente  = new FrmDeletePaciente();
         
         
-        //frmEliminarUsuario = new FrmEliminarUsuario();
-        //frmAgregarUsuario = new FrmAgregarUsuario();
+        frmEliminarUsuario = new FrmEliminarUsuario();
+        frmAgregarUsuario = new FrmAgregarUsuario();
         frmModificarUsuario = new FrmModificarUsuario();
         initComponents();
         this.desktopPane.add(frmAgregarMedico);
@@ -70,8 +70,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         this.desktopPane.add(frmAgregarPaciente);
         this.desktopPane.add(frmBuscarPaciente);
         
-       // this.desktopPane.add(frmEliminarUsuario);
-        //this.desktopPane.add(frmAgregarUsuario);
+        this.desktopPane.add(frmEliminarUsuario);
+        this.desktopPane.add(frmAgregarUsuario);
         this.desktopPane.add(frmModificarUsuario);
         this.setExtendedState(MAXIMIZED_BOTH);
       
@@ -382,11 +382,11 @@ public class MDIMainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       //frmAgregarUsuario.setVisible(true);
+       frmAgregarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-      //frmEliminarUsuario.setVisible(true);
+      frmEliminarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuUsuariosActionPerformed
