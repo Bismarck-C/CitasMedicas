@@ -8,6 +8,6 @@ public interface PacienteInterface {
 
    public String[] buscar(String id);
 
-    public String modificar(String[] data);
+    public String modificar(String[] data , String cedula);
 
 }

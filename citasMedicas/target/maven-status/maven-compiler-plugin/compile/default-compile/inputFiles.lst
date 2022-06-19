@@ -1,20 +1,26 @@
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteContainer.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioController.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteController.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\view\FrmLogin.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\administracion\Usuario.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\Medico.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioInterface.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\view\MDIMainUI.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmAgregar.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoInterface.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\MedicoContainer.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteInterface.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteEntity.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmMedicos.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\Persona.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\CitasMedicas.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\XmlAdapter.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioContainer.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoController.java
-C:\Users\PC\Documents\GitHub\proyecto2\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmBuscar.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\FrmLogin.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\MDIMainUI.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmBuscarPaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmBuscarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\CitasMedicas.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmDeletePaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmModificarUsuario.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmModificarPaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\Medico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmEliminarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\XmlAdapter.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmAgregarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmModificarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\MedicoContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\Persona.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteEntity.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\Usuario.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmAgregarPaciente.java

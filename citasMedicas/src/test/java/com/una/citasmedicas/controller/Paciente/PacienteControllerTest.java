@@ -32,21 +32,22 @@ public class PacienteControllerTest {
 
     @Test
     public void testAdd() throws Exception {
-        /*
+        
         PacienteController instance = new PacienteController();
-        String[] data = {"208310449", "Jose", "Valverde Solis", "85240612", "vsj@gmail.com", "Liberia", "12/12/1212", "Amigo", "88888888"};
+        String[] data = {"208310449888", "Jose", "Valverde Solis", "85240612", "vsj@gmail.com", "Liberia", "12/12/1212", "Amigo", "88888888"};
         String expResult = "Paciente agregado";
         String result = instance.add(data);
         assertEquals(expResult, result);
-        */
+        
     }
 
     @Test
     public void testModificar() throws Exception {
         PacienteController instance = new PacienteController();
-        String[] data = {"208310449","0", "0", "0", "0", "0", "0", "0", "0"};
+        String cedula = "208310449";
+        String[] data = {"0", "0", "0", "0", "0", "0", "0", "0"};
         String expResult = "Se modifico";
-        String result = instance.modificar( data);
+        String result = instance.modificar(data,cedula);
         assertEquals(expResult, result);
 
     }

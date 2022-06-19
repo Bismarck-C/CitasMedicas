@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
-package com.una.citasmedicas.view.Paciente;
+package com.una.citasmedicas.view.Pacientes;
 
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author vsj94
- */
 public class FrmDeletePaciente extends javax.swing.JInternalFrame {
 PacienteInterface paciente;
 
@@ -37,14 +29,17 @@ PacienteInterface paciente;
         delete = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel2.setForeground(null);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Cedula Actual:");
         jLabel2.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        jLabel8.setForeground(null);
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Eliminar Pacientes Universidad Nacional ");
+        jLabel8.setText("Eliminar Pacientes ");
 
+        CedulaActualdelete.setForeground(null);
         CedulaActualdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualdeleteActionPerformed(evt);
@@ -62,6 +57,7 @@ PacienteInterface paciente;
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        jLabel9.setForeground(null);
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ingrese la cedula del paciente a eliminar");
 
@@ -97,8 +93,8 @@ PacienteInterface paciente;
                                         .addGap(18, 18, 18)
                                         .addComponent(CedulaActualdelete, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(102, 102, 102)
-                                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addGap(94, 94, 94)
+                                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -108,14 +104,14 @@ PacienteInterface paciente;
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CedulaActualdelete, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cancelardelete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Cancelardelete)
+                    .addComponent(delete))
                 .addGap(93, 93, 93))
         );
 
@@ -127,12 +123,9 @@ PacienteInterface paciente;
     }//GEN-LAST:event_CedulaActualdeleteActionPerformed
 
     private void CancelardeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelardeleteActionPerformed
-        clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_CancelardeleteActionPerformed
-private void clearFrm() {
-        CedulaActualdelete.setText("");
-    }
+
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         boolean band = true;
         String Cedula = CedulaActualdelete.getText();
@@ -149,7 +142,9 @@ private void clearFrm() {
         clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_deleteActionPerformed
-
+private void clearFrm() {
+        CedulaActualdelete.setText("");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cancelardelete;
