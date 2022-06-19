@@ -5,21 +5,21 @@ import com.una.citasmedicas.AdministracionPaciente.Model.PacienteEntity;
 
 public class PacienteController implements PacienteInterface {
 
-    PacienteContainer obj;
+    PacienteContainer objContainer;
 
     public PacienteController() throws Exception {
-        obj = new PacienteContainer();
+        objContainer = new PacienteContainer();
     }
 
     @Override
     public String add(String[] data) {
         String Respuesta = "error";
         try {
-            if (obj.exist(data[0])) {
+            if (objContainer.exist(data[0])) {
                 Respuesta = "La cedula ingreasada YA se encuentra registrada";
             } else {
                 PacienteEntity newObj = new PacienteEntity(data);
-                obj.add(newObj);
+                objContainer.add(newObj);
                 Respuesta = "Paciente agregado";
             }
         } catch (Exception ex) {
@@ -33,15 +33,14 @@ public class PacienteController implements PacienteInterface {
     public String delete(String cedula) {
         String respuesta = "Error";
         try {
-            
-            if (obj.exist(cedula)) {
-                obj.delete(cedula);
+            if (objContainer.exist(cedula)) {
+                objContainer.delete(cedula);
                 respuesta = "Paciente eliminado";
             } else {
                 respuesta = "La cedula ingreasada no se encuentra registrada";
             }
         } catch (Exception ex) {
-               respuesta = "Se ha producido un error, contacte al administrador del sistema";
+            respuesta = "Se ha producido un error, contacte al administrador del sistema";
             ex.printStackTrace();
         }
         return respuesta;
@@ -50,44 +49,45 @@ public class PacienteController implements PacienteInterface {
     @Override
     public String[] buscar(String id) {
 
-        String[] PacienteEntity = new String[9];
+        String[] ObjEntity = new String[9];
 
         try {
-            PacienteEntity paciente = obj.buscar(id);
+            PacienteEntity paciente = objContainer.buscar(id);
             if (paciente != null) {
 
-                PacienteEntity[0] = String.valueOf(paciente.getCedula());
-                PacienteEntity[1] = String.valueOf(paciente.getNombre());
-                PacienteEntity[2] = String.valueOf(paciente.getApellidos());
-                PacienteEntity[3] = String.valueOf(paciente.getTelefono());
-                PacienteEntity[4] = String.valueOf(paciente.getCorreo());
-                PacienteEntity[5] = String.valueOf(paciente.getDireccion());
-                PacienteEntity[6] = String.valueOf(paciente.getFechaNacimiento());
-                PacienteEntity[7] = String.valueOf(paciente.getPersonaContacto());
-                PacienteEntity[8] = String.valueOf(paciente.getNumeroContacto());
+                ObjEntity[0] = String.valueOf(paciente.getCedula());
+                ObjEntity[1] = String.valueOf(paciente.getNombre());
+                ObjEntity[2] = String.valueOf(paciente.getApellidos());
+                ObjEntity[3] = String.valueOf(paciente.getTelefono());
+                ObjEntity[4] = String.valueOf(paciente.getCorreo());
+                ObjEntity[5] = String.valueOf(paciente.getDireccion());
+                ObjEntity[6] = String.valueOf(paciente.getFechaNacimiento());
+                ObjEntity[7] = String.valueOf(paciente.getPersonaContacto());
+                ObjEntity[8] = String.valueOf(paciente.getNumeroContacto());
 
             } else {
-                PacienteEntity = null;
+                ObjEntity = null;
             }
         } catch (Exception ex) {
-            PacienteEntity = null;
+            ObjEntity = null;
             ex.printStackTrace();
         }
-        return PacienteEntity;
+        return ObjEntity;
     }
 
     @Override
-    public String modificar(String[] data) {
-        String respuesta = "error";
+    public String modificar(String[] data, String cedula) {
+        String respuesta = "Error";
         try {
-            if (obj.modificar(data)) {
+            if (objContainer.modificar(data, cedula)) {
                 respuesta = "Se modifico";
             } else {
-                respuesta = "cedula ingresada no se encuentra agregada";
+                respuesta = "Cedula ingresada no se encuentra agregada";
             }
         } catch (Exception ex) {
-           respuesta = "Se ha producido un error, contacte al administrador del sistema";
+            respuesta = "Se ha producido un error, contacte al administrador del sistema";
             ex.printStackTrace();
+
         }
         return respuesta;
     }

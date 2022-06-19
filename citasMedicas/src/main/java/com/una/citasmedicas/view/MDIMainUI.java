@@ -5,10 +5,12 @@
 package com.una.citasmedicas.view;
 
 
-import com.una.citasmedicas.view.Paciente.FrmAgregarPaciente;
-import com.una.citasmedicas.view.Paciente.FrmBuscarPaciente;
-import com.una.citasmedicas.view.Paciente.FrmDeletePaciente;
-import com.una.citasmedicas.view.Paciente.FrmModificarPaciente;
+
+
+import com.una.citasmedicas.view.Pacientes.FrmAgregarPaciente;
+import com.una.citasmedicas.view.Pacientes.FrmBuscarPaciente;
+import com.una.citasmedicas.view.Pacientes.FrmDeletePaciente;
+import com.una.citasmedicas.view.Pacientes.FrmModificarPaciente;
 import com.una.citasmedicas.view.medicos.FrmAgregarMedico;
 import com.una.citasmedicas.view.medicos.FrmBuscarMedico;
 import com.una.citasmedicas.view.medicos.FrmEliminarMedico;
@@ -104,6 +106,14 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuPacientes = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu10 = new javax.swing.JMenu();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu11 = new javax.swing.JMenu();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenuUsuarios = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -187,6 +197,65 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenuMedicos);
 
         jMenuPacientes.setText("Pacientes");
+
+        jMenu8.setText("Agregar Paciente");
+
+        jMenuItem9.setText("Ir");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem9);
+
+        jMenuPacientes.add(jMenu8);
+
+        jMenu9.setText("Buscar Paciente");
+
+        jMenuItem10.setText("Ir");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jMenuItem10);
+
+        jMenuPacientes.add(jMenu9);
+
+        jMenu10.setText("Eliminar paciente");
+        jMenu10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu10ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem11.setText("Ir");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu10.add(jMenuItem11);
+
+        jMenuPacientes.add(jMenu10);
+
+        jMenu11.setText("Modificar Paciente");
+        jMenu11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu11ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem12.setText("Ir");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu11.add(jMenuItem12);
+
+        jMenuPacientes.add(jMenu11);
+
         jMenuBar1.add(jMenuPacientes);
 
         jMenuUsuarios.setText("Usuarios");
@@ -332,6 +401,37 @@ public class MDIMainUI extends javax.swing.JFrame {
       frmModificarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+        frmEliminarPaciente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        
+        frmAgregarPaciente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        frmBuscarPaciente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenu10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu10ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenu10ActionPerformed
+
+    private void jMenu11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu11ActionPerformed
+        // TODO add your handling code here:
+     
+    }//GEN-LAST:event_jMenu11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+           frmModificarPaciente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -341,16 +441,23 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenu jMenuAbout;
     private javax.swing.JMenu jMenuAgregar;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCitas;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -358,6 +465,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu jMenuMedicos;
     private javax.swing.JMenu jMenuPacientes;
     private javax.swing.JMenu jMenuSalir;
