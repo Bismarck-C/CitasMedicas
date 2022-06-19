@@ -6,6 +6,8 @@ package com.una.citasmedicas.controller.usuario;
 
 import com.una.citasmedicas.administracion.Usuario;
 import com.una.citasmedicas.administracion.UsuarioContainer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,46 +15,87 @@ import com.una.citasmedicas.administracion.UsuarioContainer;
  */
 public class UsuarioController implements UsuarioInterface {
 
+    private UsuarioContainer usuarioContainer;
+    public UsuarioController(){
+        try{
+        usuarioContainer = new UsuarioContainer();
+        }catch(Exception e){
+        
+        }
+        
+    }
+
     @Override
     public String agregar(String[] data) {
-         String response = "El usuario no se ha creado";
-        if(UsuarioContainer.exist(data[7])){
-         response = "El usuario ya existe";
-        
-        }else{
-            Usuario usuario =new Usuario(data);
-            if(UsuarioContainer.add(usuario)){
-              response="Error al ingresar el usaurio ";
-           }else{
-             response="se agrego un usuario correctamente";
+        String response = "El usuario no se ha creado";
+       
+        if (!usuarioContainer.exist(data[5])) {
+
+            try {
+                Usuario usuario = new Usuario(data);
+                if (usuarioContainer.add(usuario)) {
+
+                    response = "se agrego un usuario correctamente";
+
+                } else {
+                    response = "Error! Al ingresar el usuario";
+
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-  
         return response;
+    }
+    
+    @Override
+    public String[] getByUser(String user) {
+        if (usuarioContainer.exist(user)) {
+
+            Usuario usuario = usuarioContainer.find(user);
+
+            String[] data = {usuario.getCedula(),usuario.getNombreCompleto(),usuario.getApellido(),
+                usuario.getTelefono(),usuario.getEmail()};
+            return data;
+        }
+        return null;
+
     }
 
     @Override
-    public String modificar(String usuario, String[] data) {
-        String response = "No se encontro un usuario igual ";
-        
-        if(UsuarioContainer.exist(usuario)){
-            UsuarioContainer.get(usuario).update(data);
+    public String modificar(String user, String[] data) {
+        String response = "No se encontro un usuario igual";
+
+        if (UsuarioContainer.exist(user)) {
+            UsuarioContainer.find(user).setCedula(data[0]);
+            UsuarioContainer.find(user).setNombreCompleto(data[1]);
+            UsuarioContainer.find(user).setApellido(data[2]);
+            UsuarioContainer.find(user).setTelefono(data[3]);
+            UsuarioContainer.find(user).setEmail(data[4]);
+     
+                    
             response = "Se ha modificado los datos correctamente!";
-            
+
         }
         return response;
-        
+
     }
 
     @Override
-    public String eliminar(String usuario) {
-        String response = "Error no se a borrado el objeto. ";
-        
-        if(UsuarioContainer.delete(usuario)){
-           response = "Se borro el usuario correctamente";
-           
-       }
-        
+    public String eliminar(String user) {
+
+        String response = "Se encuentra registrado el usuario";
+        if (usuarioContainer.exist(user) == true) {
+            try {
+                usuarioContainer.delete(user);
+            } catch (Exception ex) {
+                Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            response = "Eliminado correctamente";
+        } else {
+            response = "Error! intente nuevamente";
+        }
+
         return response;
     }
 
@@ -60,5 +103,5 @@ public class UsuarioController implements UsuarioInterface {
     public void mostrar() {
         UsuarioContainer.mostrar();
     }
-    
+
 }
