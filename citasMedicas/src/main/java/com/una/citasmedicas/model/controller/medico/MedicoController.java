@@ -102,7 +102,7 @@ public class MedicoController implements MedicoInterface {
         try {
             if(medicoC.eliminar(id)){
                 
-                response = "Se ha modificado los datos correctamente!";
+                response = "Se ha eliminado los datos correctamente!";
                 
             }
         } catch (Exception ex) {

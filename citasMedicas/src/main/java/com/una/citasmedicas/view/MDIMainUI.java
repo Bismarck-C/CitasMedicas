@@ -68,7 +68,6 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmMostrarUsuario = new FrmJtable();
         
         initComponents();
-        this.desktopPane.add(frmMedico);
         this.desktopPane.add(frmAgregarMedico);
         this.desktopPane.add(frmModificarMedico);
         this.desktopPane.add(frmBuscarMedico);
@@ -239,7 +238,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jMenuMedicos.setText("Medicos");
 
-        jMenuAgregar.setText("Agregar");
+        jMenuAgregar.setText("Agregar Medico");
         jMenuAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuAgregarActionPerformed(evt);
@@ -256,7 +255,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jMenuMedicos.add(jMenuAgregar);
 
-        jMenu2.setText("Buscar");
+        jMenu2.setText("Buscar Medico");
 
         jMenuItem2.setText("Ir");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -268,7 +267,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jMenuMedicos.add(jMenu2);
 
-        jMenu3.setText("Modificar");
+        jMenu3.setText("Modificar Medico");
 
         jMenuItem4.setText("Ir");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -280,7 +279,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jMenuMedicos.add(jMenu3);
 
-        jMenu4.setText("Eliminar");
+        jMenu4.setText("Eliminar Medico");
 
         jMenuItem5.setText("ir");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -544,6 +543,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
     private void buttonMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicoActionPerformed
         frmMedico.setVisible(true);
+        
         
     }//GEN-LAST:event_buttonMedicoActionPerformed
 

@@ -110,8 +110,11 @@ public class FrmEliminarMedico extends javax.swing.JInternalFrame {
     private void buttonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEliminarActionPerformed
         String id = txtId.getText();
         JOptionPane.showMessageDialog(this, medico.delete(id));
+        
     }//GEN-LAST:event_buttonEliminarActionPerformed
-
+    public void cleanFrm(){
+        this.txtId.setText("");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;

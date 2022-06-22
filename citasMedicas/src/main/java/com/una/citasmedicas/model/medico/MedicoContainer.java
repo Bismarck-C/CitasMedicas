@@ -141,9 +141,8 @@ public class MedicoContainer extends XmlAdapter {
         DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
         Document document = documentBuilder.parse(this.url);
         NodeList medicNodes = document.getElementsByTagName("medico");
-        //s
         for (int i = 1; i < medicNodes.getLength(); i++) {
-            Node medic = medicNodes.item(i-1);
+            Node medic = medicNodes.item(i);
             String currentId = medic.getFirstChild().getTextContent();
             if(currentId.equals(cedula)) {
                 band = true;
@@ -157,50 +156,38 @@ public class MedicoContainer extends XmlAdapter {
         }
 
         // Save XML to file
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        transformer.transform(new DOMSource(document), new StreamResult(this.url));
+        this.generateXml(document);
         
        
             
         return band;
         
     }
-    public boolean eliminar(String id) throws SAXException, ParserConfigurationException, IOException, TransformerConfigurationException{
-        boolean band = false;
+    public boolean eliminar(String id) throws SAXException, ParserConfigurationException, IOException, TransformerConfigurationException, Exception{
+       
         DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
         Document document = documentBuilder.parse(this.url);
-        NodeList medicNodes = document.getElementsByTagName("medico");
+        document.getDocumentElement().normalize();
+        NodeList medicNodes = document.getDocumentElement().getElementsByTagName("medico");
         
-        for (int i = 0; i < medicNodes.getLength(); i++) {
-            Node medic = medicNodes.item(i);
-            String currentId = medic.getFirstChild().getTextContent(); 
-
-            // elejir un elemento especifico por algun atributo
-            if(currentId.equals(id)){
-                // borrar elemento
-                NodeList props = medic.getChildNodes();
-                props.item(i).removeChild(medic);
-                band = true;
+          
+            for (int i = 0; i < medicNodes.getLength(); i++) {
+                // elejir un elemento especifico 
+                if (medicNodes.item(i).getChildNodes().item(0).getTextContent().equals(id)) {
+                   Node aux = medicNodes.item(i);
+                   aux.getParentNode().removeChild(aux);
+                   this.generateXml(document);
+                   return true;
+                  
+                  
+                   
+                }
             }
-        }
-
-        // Exportar nuevamente el XML
-         TransformerFactory transformerFactory = TransformerFactory.newInstance();
-         Transformer transformer = transformerFactory.newTransformer();
-        try {
-            transformer.transform(new DOMSource(document), new StreamResult(this.url));
-            
-        } catch (TransformerException ex) {
-            Logger.getLogger(MedicoContainer.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return band;
+      
+         return false;
         
-
         
     }
     
 }
-
-   
