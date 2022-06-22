@@ -297,8 +297,8 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\PC\Documents\GitHub\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\image\botonparamenu.jpg"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.ImageIcon(&quot;src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg&quot;)" type="code"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Medicos"/>
           </Properties>
@@ -316,8 +316,8 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\PC\Documents\GitHub\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\image\botonparamenu.jpg"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.ImageIcon(&quot;src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg&quot;)" type="code"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Medicos"/>
           </Properties>
@@ -355,8 +355,8 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\PC\Documents\GitHub\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\image\botonparamenu.jpg"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.ImageIcon(&quot;src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg&quot;)" type="code"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Medicos"/>
           </Properties>
@@ -374,8 +374,8 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Light" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\PC\Documents\GitHub\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\image\botonparamenu.jpg"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.ImageIcon(&quot;src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg&quot;)" type="code"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Medicos"/>
           </Properties>
@@ -390,8 +390,8 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelFondo">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\PC\Documents\GitHub\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\image\MdiWallpaper.jpg"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.ImageIcon(&quot;src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg&quot;)" type="code"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabelfondo"/>
           </Properties>
