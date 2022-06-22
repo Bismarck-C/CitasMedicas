@@ -94,7 +94,12 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         desktopPane = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
+        buttonMedico = new javax.swing.JButton();
+        buttonMedico1 = new javax.swing.JButton();
+        jLabelTitulo = new javax.swing.JLabel();
+        buttonMedico2 = new javax.swing.JButton();
+        buttonMedico3 = new javax.swing.JButton();
+        jLabelFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuMedicos = new javax.swing.JMenu();
         jMenuAgregar = new javax.swing.JMenu();
@@ -131,13 +136,62 @@ public class MDIMainUI extends javax.swing.JFrame {
         desktopPane.setBackground(new java.awt.Color(204, 204, 204));
         desktopPane.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Administración de modulos");
-        desktopPane.add(jLabel1);
-        jLabel1.setBounds(520, 200, 230, 50);
+        buttonMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonMedico.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico.setText("Medicos");
+        buttonMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMedicoActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonMedico);
+        buttonMedico.setBounds(940, 290, 180, 60);
+
+        buttonMedico1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonMedico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico1.setText("Medicos");
+        buttonMedico1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMedico1ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonMedico1);
+        buttonMedico1.setBounds(190, 290, 180, 60);
+
+        jLabelTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTitulo.setText("Administración de modulos");
+        desktopPane.add(jLabelTitulo);
+        jLabelTitulo.setBounds(550, 200, 230, 50);
+
+        buttonMedico2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonMedico2.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico2.setText("Medicos");
+        buttonMedico2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMedico2ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonMedico2);
+        buttonMedico2.setBounds(430, 290, 180, 60);
+
+        buttonMedico3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonMedico3.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico3.setText("Medicos");
+        buttonMedico3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMedico3ActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonMedico3);
+        buttonMedico3.setBounds(690, 290, 180, 60);
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg")); // NOI18N
+        jLabelFondo.setText("jLabelfondo");
+        desktopPane.add(jLabelFondo);
+        jLabelFondo.setBounds(0, 0, 1370, 700);
 
         jMenuMedicos.setText("Medicos");
 
@@ -348,10 +402,6 @@ public class MDIMainUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
 
     }//GEN-LAST:event_jMenuSalirActionPerformed
@@ -432,14 +482,35 @@ public class MDIMainUI extends javax.swing.JFrame {
            frmModificarPaciente.setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void buttonMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMedicoActionPerformed
+
+    private void buttonMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMedico1ActionPerformed
+
+    private void buttonMedico2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMedico2ActionPerformed
+
+    private void buttonMedico3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonMedico3ActionPerformed
+
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonMedico;
+    private javax.swing.JButton buttonMedico1;
+    private javax.swing.JButton buttonMedico2;
+    private javax.swing.JButton buttonMedico3;
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
