@@ -137,7 +137,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         desktopPane.setForeground(new java.awt.Color(255, 255, 255));
 
         buttonMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
         buttonMedico.setText("Medicos");
         buttonMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +148,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         buttonMedico.setBounds(940, 290, 180, 60);
 
         buttonMedico1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico1.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
         buttonMedico1.setText("Medicos");
         buttonMedico1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +167,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         jLabelTitulo.setBounds(550, 200, 230, 50);
 
         buttonMedico2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico2.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico2.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
         buttonMedico2.setText("Medicos");
         buttonMedico2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +178,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         buttonMedico2.setBounds(430, 290, 180, 60);
 
         buttonMedico3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico3.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg")); // NOI18N
+        buttonMedico3.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
         buttonMedico3.setText("Medicos");
         buttonMedico3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,7 +188,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         desktopPane.add(buttonMedico3);
         buttonMedico3.setBounds(690, 290, 180, 60);
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Documents\\GitHub\\CitasMedicas\\citasMedicas\\src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg")); // NOI18N
+        jLabelFondo.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg"));
         jLabelFondo.setText("jLabelfondo");
         desktopPane.add(jLabelFondo);
         jLabelFondo.setBounds(0, 0, 1370, 700);
