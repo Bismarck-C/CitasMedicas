@@ -20,6 +20,7 @@ import com.una.citasmedicas.view.medicos.FrmModificarMedico;
 
 import com.una.citasmedicas.view.usuarios.FrmAgregarUsuario;
 import com.una.citasmedicas.view.usuarios.FrmEliminarUsuario;
+import com.una.citasmedicas.view.usuarios.FrmJtable;
 import com.una.citasmedicas.view.usuarios.FrmModificarUsuario;
 
 /**
@@ -42,6 +43,8 @@ public class MDIMainUI extends javax.swing.JFrame {
     FrmEliminarUsuario frmEliminarUsuario;
     FrmAgregarUsuario frmAgregarUsuario;
     FrmModificarUsuario frmModificarUsuario;
+     FrmJtable frmMostrarUsuario;
+   
     /**
      * Creates new form MDIMainUI
      * @throws java.lang.Exception
@@ -62,6 +65,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmEliminarUsuario = new FrmEliminarUsuario();
         frmAgregarUsuario = new FrmAgregarUsuario();
         frmModificarUsuario = new FrmModificarUsuario();
+        frmMostrarUsuario = new FrmJtable();
+        
         initComponents();
         this.desktopPane.add(frmMedico);
         this.desktopPane.add(frmAgregarMedico);
@@ -77,6 +82,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         this.desktopPane.add(frmEliminarUsuario);
         this.desktopPane.add(frmAgregarUsuario);
         this.desktopPane.add(frmModificarUsuario);
+        this.desktopPane.add(frmMostrarUsuario);
         this.setExtendedState(MAXIMIZED_BOTH);
      
       
@@ -134,6 +140,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem14 = new javax.swing.JMenuItem();
         jMenuCitas = new javax.swing.JMenu();
         jMenuAbout = new javax.swing.JMenu();
         jMenuSalir = new javax.swing.JMenu();
@@ -396,6 +404,18 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jMenuUsuarios.add(jMenu6);
 
+        jMenu7.setText("Mostrar");
+
+        jMenuItem14.setText("Ir");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem14);
+
+        jMenuUsuarios.add(jMenu7);
+
         jMenuBar1.add(jMenuUsuarios);
 
         jMenuCitas.setText("Citas");
@@ -535,6 +555,11 @@ public class MDIMainUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonUsuariosActionPerformed
 
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        frmMostrarUsuario.setVisible(true);
+        frmMostrarUsuario.mostrarTabla();
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -556,6 +581,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenu jMenuAbout;
@@ -566,6 +592,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

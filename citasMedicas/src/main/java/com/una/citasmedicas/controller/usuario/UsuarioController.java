@@ -6,6 +6,7 @@ package com.una.citasmedicas.controller.usuario;
 
 import com.una.citasmedicas.administracion.Usuario;
 import com.una.citasmedicas.administracion.UsuarioContainer;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author Eithel
  */
-public class UsuarioController implements UsuarioInterface {
+public class UsuarioController implements UsuarioInterface, LoginInterface {
 
     private UsuarioContainer usuarioContainer;
     public UsuarioController(){
@@ -31,8 +32,9 @@ public class UsuarioController implements UsuarioInterface {
        
         if (!usuarioContainer.exist(data[5])) {
 
-            try {
+            
                 Usuario usuario = new Usuario(data);
+            try {
                 if (usuarioContainer.add(usuario)) {
 
                     response = "se agrego un usuario correctamente";
@@ -44,6 +46,7 @@ public class UsuarioController implements UsuarioInterface {
             } catch (Exception ex) {
                 Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);
             }
+            
         }
         return response;
     }
@@ -103,5 +106,21 @@ public class UsuarioController implements UsuarioInterface {
     public void mostrar() {
         UsuarioContainer.mostrar();
     }
+    
+    public Map<String, Usuario> obtenerUsuario(){
+    try{
+        if(!usuarioContainer.listar().isEmpty()){
+          return usuarioContainer.listar();
+        }
+    }catch(Exception ex){
+        ex.getMessage();
+    }
+    return null;
+    }
 
+    @Override
+    public boolean login(String usuario, String contrasena) {
+        
+        return usuario.equals(usuarioContainer.find(usuario).getNombreUsuario()) &&  contrasena.equals(usuarioContainer.find(usuario).getPassword());
+    }
 }
