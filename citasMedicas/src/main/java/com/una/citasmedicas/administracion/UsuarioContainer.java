@@ -26,16 +26,31 @@ public class UsuarioContainer extends UsuarioFileAdapter {
         File archivo = new File("usuario.bej");
         if (!archivo.exists()) {
             archivo.createNewFile();
+            administrador();
         } else {
             loadFile();
         }
     }
-
+    private void administrador() throws Exception{
+       String[] data=new String[7];
+        data[0]="";
+        data[1]="";
+        data[2]="";
+        data[3]="";
+        data[4]="";
+        data[5]="admin";
+        data[6]="admin";
+       
+        Usuario usuario= new Usuario(data);
+        
+        cUser.put(usuario.getNombreUsuario(), usuario);
+        this.write(new ArrayList<Usuario>(cUser.values()));
+    
+    }
     public static boolean exist(String usuario) {
-        if (cUser.containsKey(usuario)) {
-            return true;
-        }
-        return false;
+       
+           return  cUser.containsKey(usuario); 
+            
     }
 
     public boolean add(Usuario user) throws Exception {
@@ -85,7 +100,11 @@ public class UsuarioContainer extends UsuarioFileAdapter {
         cUser.values().toString();
 
     }
-
+   
+    public Map<String,Usuario> listar(){
+        return cUser;
+    }
+    
     public void crearBackUp() throws Exception {
 
         DateFormat formatoFecha = new SimpleDateFormat("ddMMyyyy");

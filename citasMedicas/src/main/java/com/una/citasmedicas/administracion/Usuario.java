@@ -115,22 +115,6 @@ public class Usuario implements Serializable {
         this.telefono = telefono;
     }
 
-    
-    
-    public String toString(){
-       
-        System.out.println("====================================");
-        System.out.println("||        Usuario: "+this.getNombreUsuario());
-        System.out.println("||        Cedula: "+this.getCedula());
-        System.out.println("||        Nombre: "+this.getNombreCompleto());
-        System.out.println("||        Apellido: "+this.getApellido());
-        System.out.println("||        Email: "+this.getEmail());
-        System.out.println("||        Telefono: "+this.getTelefono());
-        System.out.println("====================================");
-        
-        return null;
-    }
-
     /**
      * @return the apellido
      */

@@ -226,17 +226,11 @@ public class FrmAgregarUsuario extends javax.swing.JInternalFrame {
         data[5] = txtNombreUsuario.getText();
         data[6] = txtPassword.getText();
         
-        for(int i = 0; i < data.length; i++){
-            if(data[i].isEmpty()){
-                band = false;
-            }
-        }
-        if(band){
+      
+        
             String reponse = usuario.agregar(data);
             JOptionPane.showMessageDialog(this, reponse);
-        }else{
-            JOptionPane.showMessageDialog(this, "Hay espacios vacios","Error", JOptionPane.ERROR_MESSAGE);
-        }
+        
 
         clearFrm();
         this.setVisible(false);
@@ -272,10 +266,6 @@ public class FrmAgregarUsuario extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnAgregar1;
-    private javax.swing.JButton btnAgregar2;
-    private javax.swing.JButton btnAgregar3;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

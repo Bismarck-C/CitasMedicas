@@ -47,7 +47,7 @@ public class FrmEliminarUsuario extends javax.swing.JInternalFrame {
         });
 
         btnAgregar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        btnAgregar.setText("Agregar");
+        btnAgregar.setText("Eliminar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
@@ -113,13 +113,16 @@ public class FrmEliminarUsuario extends javax.swing.JInternalFrame {
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         String user = txtUsuario.getText(); 
         JOptionPane.showMessageDialog(this, usuario.eliminar(user) );
+        clearFrm();
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
       this.setVisible(false);
       
     }//GEN-LAST:event_btnCerrarActionPerformed
-
+    private void clearFrm(){
+        txtUsuario.setText("");
+    }   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
