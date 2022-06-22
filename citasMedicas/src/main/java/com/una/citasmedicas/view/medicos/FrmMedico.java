@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.una.citasmedicas.view.medicos;
 
@@ -10,21 +10,17 @@ import com.una.citasmedicas.view.MDIMainUI;
  *
  * @author villa
  */
-public class FrmMedico extends javax.swing.JInternalFrame {
-    FrmAgregarMedico frmAgregarMedico;
-    FrmBuscarMedico frmBuscarMedico;
-    FrmModificarMedico frmModificarMedico;
-    FrmEliminarMedico frmEliminarMedico;
+public class FrmMedico extends javax.swing.JFrame {
+
     /**
      * Creates new form FrmMedico
      * @throws java.lang.Exception
      */
     public FrmMedico() throws Exception {
-        frmAgregarMedico = new FrmAgregarMedico();
-        frmBuscarMedico = new FrmBuscarMedico();
-        frmModificarMedico = new FrmModificarMedico();
-        frmEliminarMedico = new FrmEliminarMedico();
+          
         initComponents();
+        
+        
     }
 
     /**
@@ -42,6 +38,8 @@ public class FrmMedico extends javax.swing.JInternalFrame {
         buttonAgregar = new javax.swing.JButton();
         buttonEliminar = new javax.swing.JButton();
         buttonCancelar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtTitulo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         txtTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -105,7 +103,7 @@ public class FrmMedico extends javax.swing.JInternalFrame {
                             .addComponent(buttonEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(buttonAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(buttonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,26 +126,29 @@ public class FrmMedico extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-          this.setVisible(false);
-    }//GEN-LAST:event_buttonCancelarActionPerformed
-
-    private void buttonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAgregarActionPerformed
-        
-       
-    }//GEN-LAST:event_buttonAgregarActionPerformed
-
-    private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
-        frmBuscarMedico.setVisible(true);
-    }//GEN-LAST:event_buttonBuscarActionPerformed
-
     private void buttonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonModificarActionPerformed
-        frmModificarMedico.setVisible(true);
+        
     }//GEN-LAST:event_buttonModificarActionPerformed
 
+    private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
+        
+    }//GEN-LAST:event_buttonBuscarActionPerformed
+
+    private void buttonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAgregarActionPerformed
+
+    }//GEN-LAST:event_buttonAgregarActionPerformed
+
     private void buttonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEliminarActionPerformed
-       frmEliminarMedico.setVisible(true);
+        
     }//GEN-LAST:event_buttonEliminarActionPerformed
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonCancelarActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
