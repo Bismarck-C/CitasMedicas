@@ -11,9 +11,11 @@ import com.una.citasmedicas.view.Pacientes.FrmAgregarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmBuscarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmDeletePaciente;
 import com.una.citasmedicas.view.Pacientes.FrmModificarPaciente;
+
 import com.una.citasmedicas.view.medicos.FrmAgregarMedico;
 import com.una.citasmedicas.view.medicos.FrmBuscarMedico;
 import com.una.citasmedicas.view.medicos.FrmEliminarMedico;
+import com.una.citasmedicas.view.medicos.FrmMedico;
 import com.una.citasmedicas.view.medicos.FrmModificarMedico;
 
 import com.una.citasmedicas.view.usuarios.FrmAgregarUsuario;
@@ -25,7 +27,7 @@ import com.una.citasmedicas.view.usuarios.FrmModificarUsuario;
  * @author PC
  */
 public class MDIMainUI extends javax.swing.JFrame {
-
+    FrmMedico frmMedico;
     FrmAgregarMedico frmAgregarMedico;
     FrmBuscarMedico frmBuscarMedico;
     FrmModificarMedico frmModificarMedico;
@@ -45,6 +47,7 @@ public class MDIMainUI extends javax.swing.JFrame {
      * @throws java.lang.Exception
      */
     public MDIMainUI() throws Exception {
+        frmMedico = new FrmMedico();
         frmAgregarMedico = new FrmAgregarMedico();
         frmBuscarMedico = new FrmBuscarMedico();
         frmModificarMedico = new FrmModificarMedico();
@@ -60,6 +63,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmAgregarUsuario = new FrmAgregarUsuario();
         frmModificarUsuario = new FrmModificarUsuario();
         initComponents();
+        this.desktopPane.add(frmMedico);
         this.desktopPane.add(frmAgregarMedico);
         this.desktopPane.add(frmModificarMedico);
         this.desktopPane.add(frmBuscarMedico);
@@ -74,7 +78,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         this.desktopPane.add(frmAgregarUsuario);
         this.desktopPane.add(frmModificarUsuario);
         this.setExtendedState(MAXIMIZED_BOTH);
-      
+     
       
         
         
@@ -94,11 +98,15 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         desktopPane = new javax.swing.JDesktopPane();
+        txtMedico = new javax.swing.JLabel();
         buttonMedico = new javax.swing.JButton();
-        buttonMedico1 = new javax.swing.JButton();
+        txtCitas = new javax.swing.JLabel();
+        buttonCitas = new javax.swing.JButton();
+        txtPaciente = new javax.swing.JLabel();
+        buttonPacientes = new javax.swing.JButton();
+        txtUsuario = new javax.swing.JLabel();
+        buttonUsuarios = new javax.swing.JButton();
         jLabelTitulo = new javax.swing.JLabel();
-        buttonMedico2 = new javax.swing.JButton();
-        buttonMedico3 = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuMedicos = new javax.swing.JMenu();
@@ -136,6 +144,13 @@ public class MDIMainUI extends javax.swing.JFrame {
         desktopPane.setBackground(new java.awt.Color(204, 204, 204));
         desktopPane.setForeground(new java.awt.Color(255, 255, 255));
 
+        txtMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        txtMedico.setForeground(new java.awt.Color(255, 255, 255));
+        txtMedico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtMedico.setText("Medicos");
+        desktopPane.add(txtMedico);
+        txtMedico.setBounds(490, 300, 100, 30);
+
         buttonMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         buttonMedico.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
         buttonMedico.setText("Medicos");
@@ -145,18 +160,61 @@ public class MDIMainUI extends javax.swing.JFrame {
             }
         });
         desktopPane.add(buttonMedico);
-        buttonMedico.setBounds(940, 290, 180, 60);
+        buttonMedico.setBounds(450, 290, 180, 60);
 
-        buttonMedico1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico1.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonMedico1.setText("Medicos");
-        buttonMedico1.addActionListener(new java.awt.event.ActionListener() {
+        txtCitas.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        txtCitas.setForeground(new java.awt.Color(255, 255, 255));
+        txtCitas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtCitas.setText("Citas");
+        desktopPane.add(txtCitas);
+        txtCitas.setBounds(1260, 300, 100, 30);
+
+        buttonCitas.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonCitas.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
+        buttonCitas.setText("Citas");
+        buttonCitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonMedico1ActionPerformed(evt);
+                buttonCitasActionPerformed(evt);
             }
         });
-        desktopPane.add(buttonMedico1);
-        buttonMedico1.setBounds(190, 290, 180, 60);
+        desktopPane.add(buttonCitas);
+        buttonCitas.setBounds(1220, 290, 180, 60);
+
+        txtPaciente.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        txtPaciente.setForeground(new java.awt.Color(255, 255, 255));
+        txtPaciente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtPaciente.setText("Pacientes");
+        desktopPane.add(txtPaciente);
+        txtPaciente.setBounds(760, 300, 100, 30);
+
+        buttonPacientes.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonPacientes.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
+        buttonPacientes.setText("Pacientes");
+        buttonPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPacientesActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonPacientes);
+        buttonPacientes.setBounds(720, 290, 180, 60);
+
+        txtUsuario.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtUsuario.setText("Usuarios");
+        desktopPane.add(txtUsuario);
+        txtUsuario.setBounds(1000, 300, 100, 30);
+
+        buttonUsuarios.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        buttonUsuarios.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
+        buttonUsuarios.setText("Usuarios");
+        buttonUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonUsuariosActionPerformed(evt);
+            }
+        });
+        desktopPane.add(buttonUsuarios);
+        buttonUsuarios.setBounds(960, 290, 180, 60);
 
         jLabelTitulo.setBackground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
@@ -164,34 +222,12 @@ public class MDIMainUI extends javax.swing.JFrame {
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Administración de modulos");
         desktopPane.add(jLabelTitulo);
-        jLabelTitulo.setBounds(550, 200, 230, 50);
-
-        buttonMedico2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico2.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonMedico2.setText("Medicos");
-        buttonMedico2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonMedico2ActionPerformed(evt);
-            }
-        });
-        desktopPane.add(buttonMedico2);
-        buttonMedico2.setBounds(430, 290, 180, 60);
-
-        buttonMedico3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        buttonMedico3.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonMedico3.setText("Medicos");
-        buttonMedico3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonMedico3ActionPerformed(evt);
-            }
-        });
-        desktopPane.add(buttonMedico3);
-        buttonMedico3.setBounds(690, 290, 180, 60);
+        jLabelTitulo.setBounds(820, 180, 230, 50);
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg"));
         jLabelFondo.setText("jLabelfondo");
         desktopPane.add(jLabelFondo);
-        jLabelFondo.setBounds(0, 0, 1370, 700);
+        jLabelFondo.setBounds(0, 0, 1940, 1010);
 
         jMenuMedicos.setText("Medicos");
 
@@ -391,11 +427,11 @@ public class MDIMainUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1298, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1674, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
         );
 
         pack();
@@ -479,24 +515,25 @@ public class MDIMainUI extends javax.swing.JFrame {
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
-           frmModificarPaciente.setVisible(true);
+          frmModificarPaciente.setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
-    private void buttonMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicoActionPerformed
+    private void buttonCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCitasActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_buttonCitasActionPerformed
+
+    private void buttonMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicoActionPerformed
+        frmMedico.setVisible(true);
+        
     }//GEN-LAST:event_buttonMedicoActionPerformed
 
-    private void buttonMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico1ActionPerformed
+    private void buttonPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPacientesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonMedico1ActionPerformed
+    }//GEN-LAST:event_buttonPacientesActionPerformed
 
-    private void buttonMedico2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico2ActionPerformed
+    private void buttonUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUsuariosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonMedico2ActionPerformed
-
-    private void buttonMedico3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedico3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonMedico3ActionPerformed
+    }//GEN-LAST:event_buttonUsuariosActionPerformed
 
 
     /**
@@ -504,10 +541,10 @@ public class MDIMainUI extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonCitas;
     private javax.swing.JButton buttonMedico;
-    private javax.swing.JButton buttonMedico1;
-    private javax.swing.JButton buttonMedico2;
-    private javax.swing.JButton buttonMedico3;
+    private javax.swing.JButton buttonPacientes;
+    private javax.swing.JButton buttonUsuarios;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelTitulo;
@@ -542,6 +579,10 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuSalir;
     private javax.swing.JMenu jMenuUsuarios;
     private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JLabel txtCitas;
+    private javax.swing.JLabel txtMedico;
+    private javax.swing.JLabel txtPaciente;
+    private javax.swing.JLabel txtUsuario;
     // End of variables declaration//GEN-END:variables
 
 }
