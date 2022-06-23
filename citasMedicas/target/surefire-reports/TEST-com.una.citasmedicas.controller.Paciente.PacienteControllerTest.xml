@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.una.citasmedicas.controller.Paciente.PacienteControllerTest" time="0.094" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.una.citasmedicas.controller.Paciente.PacienteControllerTest" time="0.065" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\vsj94\AppData\Local\Temp\surefire10766285389734905873\surefirebooter7594296872066065123.jar C:\Users\vsj94\AppData\Local\Temp\surefire10766285389734905873 2022-06-19T12-49-38_420-jvmRun1 surefire1428569411330595402tmp surefire_02609544140164011393tmp"/>
+    <property name="sun.java.command" value="C:\Users\vsj94\AppData\Local\Temp\surefire5321011733486890247\surefirebooter6635624976478846050.jar C:\Users\vsj94\AppData\Local\Temp\surefire5321011733486890247 2022-06-22T10-22-44_813-jvmRun1 surefire11440791840188356697tmp surefire_012278960784527439498tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.una.citasmedicas.controller.Paciente.PacienteControllerTest#testAdd"/>
     <property name="surefire.test.class.path" value="C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\target\test-classes;C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\target\classes;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\vsj94\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vsj94\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\vsj94\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE140\AbsoluteLayout-RELEASE140.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\vsj94\AppData\Local\Temp\surefire10766285389734905873\surefirebooter7594296872066065123.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\vsj94\AppData\Local\Temp\surefire5321011733486890247\surefirebooter6635624976478846050.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
@@ -58,5 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAdd" classname="com.una.citasmedicas.controller.Paciente.PacienteControllerTest" time="0.085"/>
+  <testcase name="testAdd" classname="com.una.citasmedicas.controller.Paciente.PacienteControllerTest" time="0.049">
+    <failure message="expected: &lt;Paciente agregado&gt; but was: &lt;La cedula ingreasada YA se encuentra registrada&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Paciente agregado> but was: <La cedula ingreasada YA se encuentra registrada>
+	at com.una.citasmedicas.controller.Paciente.PacienteControllerTest.testAdd(PacienteControllerTest.java:40)
+]]></failure>
+  </testcase>
 </testsuite>

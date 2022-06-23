@@ -49,30 +49,30 @@ public class PacienteController implements PacienteInterface {
     @Override
     public String[] buscar(String id) {
 
-        String[] ObjEntity = new String[9];
+        String[] vector = new String[9];
 
         try {
             PacienteEntity paciente = objContainer.buscar(id);
             if (paciente != null) {
 
-                ObjEntity[0] = String.valueOf(paciente.getCedula());
-                ObjEntity[1] = String.valueOf(paciente.getNombre());
-                ObjEntity[2] = String.valueOf(paciente.getApellidos());
-                ObjEntity[3] = String.valueOf(paciente.getTelefono());
-                ObjEntity[4] = String.valueOf(paciente.getCorreo());
-                ObjEntity[5] = String.valueOf(paciente.getDireccion());
-                ObjEntity[6] = String.valueOf(paciente.getFechaNacimiento());
-                ObjEntity[7] = String.valueOf(paciente.getPersonaContacto());
-                ObjEntity[8] = String.valueOf(paciente.getNumeroContacto());
+                vector[0] = "Cedula: " + String.valueOf(paciente.getCedula());
+                vector[1] = "Nombre: " + String.valueOf(paciente.getNombre());
+                vector[2] = "apellidos: " + String.valueOf(paciente.getApellidos());
+                vector[3] = "Numero telefonico: " + String.valueOf(paciente.getTelefono());
+                vector[4] = "Correo Electronico: " + String.valueOf(paciente.getCorreo());
+                vector[5] = "Dirrecion de domicilio: " + String.valueOf(paciente.getDireccion());
+                vector[6] = "Fecha de nacimiento: " + String.valueOf(paciente.getFechaNacimiento());
+                vector[7] = "Persona en caso de emergecia: " + String.valueOf(paciente.getPersonaContacto());
+                vector[8] = "Numero en caso de emergencia: " + String.valueOf(paciente.getNumeroContacto());
 
             } else {
-                ObjEntity = null;
+                vector = null;
             }
         } catch (Exception ex) {
-            ObjEntity = null;
+            vector = null;
             ex.printStackTrace();
         }
-        return ObjEntity;
+        return vector;
     }
 
     @Override
@@ -92,4 +92,42 @@ public class PacienteController implements PacienteInterface {
         return respuesta;
     }
 
+    @Override
+    public String retornarnumCitas(String cedula) {
+        String respuesta = "Error";
+        try {
+            if (objContainer.exist(cedula)) {
+                short numero = objContainer.retornarnumCitas(cedula);
+                respuesta = String.valueOf(numero);
+            } else {
+                respuesta = "Cedula ingresada no se encuentra agregada";
+            }
+
+        } catch (Exception ex) {
+            respuesta = "Se ha producido un error, contacte al administrador del sistema";
+            ex.printStackTrace();
+        }
+        return respuesta;
+    }
+
+    @Override
+    public String SumarUnaCita(String cedula) {
+        String respuesta = "Error";
+
+        try {
+            if (objContainer.exist(cedula)) {
+                objContainer.SumarUnaCita(cedula);
+                respuesta = "Se agrego una cita";
+            } else {
+                respuesta = "Cedula ingresada no se encuentra agregada";
+            }
+        } catch (Exception ex) {
+            respuesta = "Se ha producido un error, contacte al administrador del sistema";
+
+        }
+        return respuesta;
+    }
+
+    
 }
+   

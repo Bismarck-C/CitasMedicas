@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.una.citasmedicas.controller.usuario.UsuarioControllerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in com.una.citasmedicas.controller.usuario.UsuarioControllerTest
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in com.una.citasmedicas.controller.usuario.UsuarioControllerTest
 testModificar  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <> but was: <No se encontro un usuario igual >
 	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testModificar(UsuarioControllerTest.java:65)

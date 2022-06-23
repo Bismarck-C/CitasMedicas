@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.una.citasmedicas.controller.usuario.UsuarioControllerTest" time="0.003" tests="4" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest" time="0.034" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,8 +15,9 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\vsj94\AppData\Local\Temp\surefire9209050754154664523\surefirebooter14951184819996191451.jar C:\Users\vsj94\AppData\Local\Temp\surefire9209050754154664523 2022-06-22T10-22-30_368-jvmRun1 surefire18260699399021989035tmp surefire_011882535122877550691tmp"/>
+    <property name="sun.java.command" value="C:\Users\vsj94\AppData\Local\Temp\surefire16388100499720012522\surefirebooter2142594868078833068.jar C:\Users\vsj94\AppData\Local\Temp\surefire16388100499720012522 2022-06-23T15-04-00_340-jvmRun1 surefire7678039930235937323tmp surefire_07443287491044676562tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest#testRetornarnumCitas"/>
     <property name="surefire.test.class.path" value="C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\target\test-classes;C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\target\classes;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\vsj94\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vsj94\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\vsj94\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\vsj94\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE140\AbsoluteLayout-RELEASE140.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\vsj94"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\vsj94\AppData\Local\Temp\surefire9209050754154664523\surefirebooter14951184819996191451.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\vsj94\AppData\Local\Temp\surefire16388100499720012522\surefirebooter2142594868078833068.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
@@ -57,36 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAgregar" classname="com.una.citasmedicas.controller.usuario.UsuarioControllerTest" time="0.001"/>
-  <testcase name="testModificar" classname="com.una.citasmedicas.controller.usuario.UsuarioControllerTest" time="0">
-    <failure message="expected: &lt;&gt; but was: &lt;No se encontro un usuario igual &gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <No se encontro un usuario igual >
-	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testModificar(UsuarioControllerTest.java:65)
-]]></failure>
-    <system-out><![CDATA[modificar
-]]></system-out>
-  </testcase>
-  <testcase name="testEliminar" classname="com.una.citasmedicas.controller.usuario.UsuarioControllerTest" time="0">
-    <failure message="expected: &lt;&gt; but was: &lt;Error no se a borrado el objeto. &gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <> but was: <Error no se a borrado el objeto. >
-	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testEliminar(UsuarioControllerTest.java:80)
-]]></failure>
-    <system-out><![CDATA[eliminar
-]]></system-out>
-  </testcase>
-  <testcase name="testMostrar" classname="com.una.citasmedicas.controller.usuario.UsuarioControllerTest" time="0.001">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testMostrar(UsuarioControllerTest.java:94)
-</failure>
-    <system-out><![CDATA[mostrar
-====================================
-||        Usuario: pino
-||        Cedula: 123
-||        Nombre:pepe
-||        Apellido: a
-||        Telefono:45
-||        Email: @
-||        Direccion: sur
-||        Fecha de nacimiento: 12/11
-====================================
-]]></system-out>
-  </testcase>
+  <testcase name="testRetornarnumCitas" classname="com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest" time="0.026"/>
 </testsuite>
