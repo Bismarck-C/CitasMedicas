@@ -800,11 +800,17 @@ public class FrmMedico extends javax.swing.JInternalFrame {
     private void buttonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEliminarActionPerformed
         String id = txtId.getText();
         JOptionPane.showMessageDialog(this, medico.delete(id));
+<<<<<<< HEAD
         cleanFrm();
         
+=======
+        cleanFrmEliminar();
+>>>>>>> main
 
     }//GEN-LAST:event_buttonEliminarActionPerformed
-
+    public void cleanFrmEliminar(){
+        txtId.setText("");
+    }
     private void buttonCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelar1ActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_buttonCancelar1ActionPerformed
