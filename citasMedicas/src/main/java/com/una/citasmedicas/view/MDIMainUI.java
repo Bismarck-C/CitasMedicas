@@ -28,11 +28,12 @@ import com.una.citasmedicas.view.usuarios.FrmModificarUsuario;
  * @author PC
  */
 public class MDIMainUI extends javax.swing.JFrame {
-    FrmMedico frmMedico;
     FrmAgregarMedico frmAgregarMedico;
     FrmBuscarMedico frmBuscarMedico;
     FrmModificarMedico frmModificarMedico;
     FrmEliminarMedico frmEliminarMedico;
+    FrmMedico frmMedico;
+   
     
     FrmAgregarPaciente frmAgregarPaciente;
     FrmBuscarPaciente frmBuscarPaciente;
@@ -43,7 +44,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     FrmEliminarUsuario frmEliminarUsuario;
     FrmAgregarUsuario frmAgregarUsuario;
     FrmModificarUsuario frmModificarUsuario;
-     FrmJtable frmMostrarUsuario;
+    FrmJtable frmMostrarUsuario;
    
     /**
      * Creates new form MDIMainUI
@@ -68,6 +69,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmMostrarUsuario = new FrmJtable();
         
         initComponents();
+        this.desktopPane.add(frmMedico);
         this.desktopPane.add(frmAgregarMedico);
         this.desktopPane.add(frmModificarMedico);
         this.desktopPane.add(frmBuscarMedico);

@@ -57,28 +57,28 @@ public class FrmLogin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Inicio de Sesión");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 20, 478, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 310, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Usuario");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 101, 129, 25));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 129, 25));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Contraseña");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 144, 129, 25));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 129, 25));
 
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 101, 140, -1));
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 140, -1));
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -87,7 +87,7 @@ public class FrmLogin extends javax.swing.JFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 205, -1, -1));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
 
         btnIniciar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         btnIniciar.setText("Iniciar");
@@ -96,18 +96,18 @@ public class FrmLogin extends javax.swing.JFrame {
                 btnIniciarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 205, 86, -1));
+        getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 86, -1));
 
         txtContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtContrasenaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 144, 140, -1));
+        getContentPane().add(txtContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 140, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\ini.jpg"));
         jLabel4.setText("Imagen");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 0, 590, 450));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 0, 580, 460));
 
         pack();
         setLocationRelativeTo(null);
