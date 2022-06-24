@@ -35,7 +35,7 @@ public class CitaContainer extends XmlAdapter{
         Element fecha = doc.createElement("Fecha");
         
         
-        numCita.appendChild(doc.createTextNode(String.valueOf(cita.getNumCita())));
+        numCita.appendChild(doc.createTextNode(String.valueOf(cita.getNumCitas())));
         hora.appendChild(doc.createTextNode(cita.getHora()));
         fecha.appendChild(doc.createTextNode(cita.getFecha()));
         
