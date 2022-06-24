@@ -9,6 +9,7 @@ import com.una.citasmedicas.view.Pacientes.FrmBuscarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmDeletePaciente;
 import com.una.citasmedicas.view.Pacientes.FrmModificarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmPaciente;
+import com.una.citasmedicas.view.citas.FrmCitas;
 
 import com.una.citasmedicas.view.medicos.FrmAgregarMedico;
 import com.una.citasmedicas.view.medicos.FrmBuscarMedico;
@@ -45,6 +46,8 @@ public class MDIMainUI extends javax.swing.JFrame {
     FrmAgregarUsuario frmAgregarUsuario;
     FrmModificarUsuario frmModificarUsuario;
     FrmJtable frmMostrarUsuario;
+    
+    FrmCitas frmCitas;
 
     /**
      * Creates new form MDIMainUI
@@ -68,6 +71,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmAgregarUsuario = new FrmAgregarUsuario();
         frmModificarUsuario = new FrmModificarUsuario();
         frmMostrarUsuario = new FrmJtable();
+        
+        frmCitas = new FrmCitas();
 
         initComponents();
         this.desktopPane.add(frmMedico);
@@ -86,6 +91,10 @@ public class MDIMainUI extends javax.swing.JFrame {
         this.desktopPane.add(frmAgregarUsuario);
         this.desktopPane.add(frmModificarUsuario);
         this.desktopPane.add(frmMostrarUsuario);
+        
+        this.desktopPane.add(frmCitas);
+        
+        
         this.setExtendedState(MAXIMIZED_BOTH);
 
     }
@@ -140,6 +149,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuCitas = new javax.swing.JMenu();
+        jMenu12 = new javax.swing.JMenu();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenuAbout = new javax.swing.JMenu();
         jMenuSalir = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -232,7 +243,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         jLabelFondo.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg"));
         jLabelFondo.setText("jLabelfondo");
         desktopPane.add(jLabelFondo);
-        jLabelFondo.setBounds(0, 10, 1940, 1010);
+        jLabelFondo.setBounds(0, 0, 1940, 1010);
 
         jMenuMedicos.setText("Medicos");
 
@@ -416,6 +427,19 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenuUsuarios);
 
         jMenuCitas.setText("Citas");
+
+        jMenu12.setText("Regitrar Cita");
+
+        jMenuItem13.setText("Ir");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu12.add(jMenuItem13);
+
+        jMenuCitas.add(jMenu12);
+
         jMenuBar1.add(jMenuCitas);
 
         jMenuAbout.setText("About");
@@ -448,7 +472,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         pack();
@@ -558,6 +582,10 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmMostrarUsuario.mostrarTabla();
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        frmCitas.setVisible(true);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -573,6 +601,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu12;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -589,6 +618,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
