@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.una.citasmedicas.model.citas;
 
 import com.una.citasmedicas.model.XmlAdapter;
@@ -22,7 +19,7 @@ public class CitaContainer extends XmlAdapter{
     }
     
     
-    public boolean add(Cita cita) throws Exception{
+    public boolean add(Citas cita) throws Exception{
     
         DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document doc=builder.parse(this.url);
@@ -35,7 +32,7 @@ public class CitaContainer extends XmlAdapter{
         Element fecha = doc.createElement("Fecha");
         
         
-        numCita.appendChild(doc.createTextNode(String.valueOf(cita.getNumCita())));
+        numCita.appendChild(doc.createTextNode(String.valueOf(cita.getNumCitas())));
         hora.appendChild(doc.createTextNode(cita.getHora()));
         fecha.appendChild(doc.createTextNode(cita.getFecha()));
         
