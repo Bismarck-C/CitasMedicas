@@ -1,6 +1,8 @@
 package com.una.citasmedicas.view.Pacientes;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
@@ -28,7 +30,6 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         CedulaAgregar = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         PersonaAgregar = new javax.swing.JTextField();
-        NacimientoAgregar = new javax.swing.JTextField();
         NombreAgregar = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         ApellidoAgregar = new javax.swing.JTextField();
@@ -43,6 +44,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         TituloAgregar = new javax.swing.JLabel();
         CorreoAgregar = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        Dateagregar = new com.toedter.calendar.JDateChooser();
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -71,12 +73,6 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         PersonaAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaAgregarActionPerformed(evt);
-            }
-        });
-
-        NacimientoAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NacimientoAgregarActionPerformed(evt);
             }
         });
 
@@ -187,23 +183,25 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
                                             .addComponent(nombre)
                                             .addComponent(jLabel7)
                                             .addComponent(cedula))
-                                        .addGap(6, 6, 6))))
+                                        .addGap(0, 0, 0))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
                                 .addComponent(CancelarAgregar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(CedulaAgregar)
-                                .addComponent(NombreAgregar)
-                                .addComponent(ApellidoAgregar)
-                                .addComponent(DireccionAgregar, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(NacimientoAgregar, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(PersonaAgregar, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(NumeroAgregar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(CorreoAgregar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TelefonoAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(GuardarAgregar))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(CorreoAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(GuardarAgregar)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TelefonoAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Dateagregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CedulaAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(NombreAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(ApellidoAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(DireccionAgregar)
+                                .addComponent(PersonaAgregar)
+                                .addComponent(NumeroAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -236,9 +234,9 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
                     .addComponent(DireccionAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NacimientoAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
+                    .addComponent(Dateagregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PersonaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -279,6 +277,14 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
 
     private void GuardarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarAgregarActionPerformed
         boolean band = true;
+        
+         String fecha;
+        fecha = Dateagregar.getDate().toString();
+        Date tempDate = Dateagregar.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        fecha = sdf.format(tempDate);
+        
+        
         String[] data = new String[9];
         data[0] = CedulaAgregar.getText();
         data[1] = NombreAgregar.getText();
@@ -286,7 +292,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         data[3] = TelefonoAgregar.getText();
         data[4] = CorreoAgregar.getText();
         data[5] = DireccionAgregar.getText();
-        data[6] = NacimientoAgregar.getText();
+        data[6] = fecha;
         data[7] = PersonaAgregar.getText();
         data[8] = NumeroAgregar.getText();
         for (int i = 0; i < data.length; i++) {
@@ -318,7 +324,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         TelefonoAgregar.setText("");
         CorreoAgregar.setText("");
         DireccionAgregar.setText("");
-        NacimientoAgregar.setText("");
+        Dateagregar.cleanup();     
         PersonaAgregar.setText("");
         NumeroAgregar.setText("");
     }
@@ -330,19 +336,15 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CorreoAgregarActionPerformed
 
-    private void NacimientoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NacimientoAgregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NacimientoAgregarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ApellidoAgregar;
     private javax.swing.JButton CancelarAgregar;
     private javax.swing.JTextField CedulaAgregar;
     private javax.swing.JTextField CorreoAgregar;
+    private com.toedter.calendar.JDateChooser Dateagregar;
     private javax.swing.JTextField DireccionAgregar;
     private javax.swing.JButton GuardarAgregar;
-    private javax.swing.JTextField NacimientoAgregar;
     private javax.swing.JTextField NombreAgregar;
     private javax.swing.JTextField NumeroAgregar;
     private javax.swing.JTextField PersonaAgregar;

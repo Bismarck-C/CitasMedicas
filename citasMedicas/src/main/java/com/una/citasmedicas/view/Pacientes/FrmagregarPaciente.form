@@ -47,7 +47,7 @@
                                           <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Component id="cedula" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -58,18 +58,21 @@
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="CorreoAgregar" min="-2" pref="166" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="GuardarAgregar" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="TelefonoAgregar" alignment="1" max="32767" attributes="0"/>
+                              <Component id="Dateagregar" alignment="1" max="32767" attributes="0"/>
                               <Component id="CedulaAgregar" alignment="1" max="32767" attributes="0"/>
                               <Component id="NombreAgregar" alignment="1" max="32767" attributes="0"/>
                               <Component id="ApellidoAgregar" alignment="1" max="32767" attributes="0"/>
                               <Component id="DireccionAgregar" alignment="0" max="32767" attributes="0"/>
-                              <Component id="NacimientoAgregar" alignment="0" max="32767" attributes="0"/>
                               <Component id="PersonaAgregar" alignment="0" max="32767" attributes="0"/>
-                              <Component id="NumeroAgregar" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="NumeroAgregar" alignment="0" pref="166" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="CorreoAgregar" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          <Component id="TelefonoAgregar" alignment="1" min="-2" pref="166" max="-2" attributes="0"/>
-                          <Component id="GuardarAgregar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -113,9 +116,9 @@
                   <Component id="jLabel5" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="NacimientoAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="Dateagregar" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -178,11 +181,6 @@
     <Component class="javax.swing.JTextField" name="PersonaAgregar">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PersonaAgregarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="NacimientoAgregar">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NacimientoAgregarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="NombreAgregar">
@@ -307,6 +305,8 @@
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Numero de emergencia"/>
       </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="Dateagregar">
     </Component>
   </SubComponents>
 </Form>

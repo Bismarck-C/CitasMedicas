@@ -19,7 +19,7 @@ public class CitaContainer extends XmlAdapter{
     }
     
     
-    public boolean add(Citas cita) throws Exception{
+    public boolean add(Cita cita) throws Exception{
     
         DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document doc=builder.parse(this.url);
