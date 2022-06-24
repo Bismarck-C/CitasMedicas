@@ -11,7 +11,6 @@ PacienteInterface paciente;
         try {
             paciente = new PacienteController();
             initComponents();
-
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error al cargar los datos", "Error de Sistema", JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();
@@ -29,17 +28,16 @@ PacienteInterface paciente;
         delete = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel2.setForeground(null);
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Cedula Actual:");
         jLabel2.setToolTipText("");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
-        jLabel8.setForeground(null);
+        jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Eliminar Pacientes ");
 
-        CedulaActualdelete.setForeground(null);
+        CedulaActualdelete.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        CedulaActualdelete.setToolTipText("Agregue la cedula que quiere eliminar");
         CedulaActualdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualdeleteActionPerformed(evt);
@@ -56,8 +54,7 @@ PacienteInterface paciente;
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
-        jLabel9.setForeground(null);
+        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ingrese la cedula del paciente a eliminar");
 
@@ -104,7 +101,7 @@ PacienteInterface paciente;
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CedulaActualdelete, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -123,13 +120,13 @@ PacienteInterface paciente;
     }//GEN-LAST:event_CedulaActualdeleteActionPerformed
 
     private void CancelardeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelardeleteActionPerformed
+        clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_CancelardeleteActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         boolean band = true;
         String Cedula = CedulaActualdelete.getText();
-
         if (Cedula.isBlank()) {
             band = false;
         }

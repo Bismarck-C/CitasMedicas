@@ -76,27 +76,18 @@
                                   <Component id="jLabel3" min="-2" pref="63" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="TelefonoModificar" min="-2" pref="166" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="NacimientoModificar" max="32767" attributes="0"/>
-                              <Component id="DireccionModificar" max="32767" attributes="0"/>
-                              <Component id="correoModificar" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="PersonaModificar" alignment="0" max="32767" attributes="0"/>
-                              <Component id="NumeroModificar" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="NombreModificar" min="-2" pref="166" max="-2" attributes="0"/>
-                              <Component id="ApellidoModificar" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="TelefonoModificar" alignment="0" pref="166" max="32767" attributes="0"/>
+                          <Component id="DireccionModificar" alignment="0" max="32767" attributes="0"/>
+                          <Component id="correoModificar" alignment="0" pref="166" max="32767" attributes="0"/>
+                          <Component id="PersonaModificar" alignment="0" max="32767" attributes="0"/>
+                          <Component id="NumeroModificar" alignment="0" pref="166" max="32767" attributes="0"/>
+                          <Component id="NombreModificar" alignment="0" pref="166" max="32767" attributes="0"/>
+                          <Component id="ApellidoModificar" alignment="0" pref="166" max="32767" attributes="0"/>
+                          <Component id="DateModificar" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -140,17 +131,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="DireccionModificar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="NacimientoModificar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel6" pref="24" max="32767" attributes="0"/>
+                          <Component id="DateModificar" pref="24" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel10" max="32767" attributes="0"/>
@@ -198,12 +184,10 @@
         <Property name="text" type="java.lang.String" value="Persona de Contacto:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="NacimientoModificar">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NacimientoModificarActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="TelefonoModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el telefono que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TelefonoModificarActionPerformed"/>
       </Events>
@@ -228,6 +212,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="NombreModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el nombre que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombreModificarActionPerformed"/>
       </Events>
@@ -251,6 +238,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="NumeroModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el numero telefonico que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NumeroModificarActionPerformed"/>
       </Events>
@@ -284,11 +274,17 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="cedulaModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese la cedula para modificar valores"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cedulaModificarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="correoModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el correo que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="correoModificarActionPerformed"/>
       </Events>
@@ -311,6 +307,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="ApellidoModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el apellido que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ApellidoModificarActionPerformed"/>
       </Events>
@@ -325,6 +324,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="DireccionModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese la direccion que quiere cambiar"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DireccionModificarActionPerformed"/>
       </Events>
@@ -339,6 +341,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="PersonaModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese el nombre de la persona "/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PersonaModificarActionPerformed"/>
       </Events>
@@ -358,6 +363,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="DateModificar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese la fecha que quiere cambiar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="DateModificarAncestorAdded"/>
       </Events>
     </Component>
   </SubComponents>
