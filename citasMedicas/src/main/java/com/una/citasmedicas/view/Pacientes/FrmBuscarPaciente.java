@@ -33,7 +33,7 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Cedula Actual:");
+        jLabel2.setText("Cedula:");
         jLabel2.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -53,6 +53,7 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
 
         CedulaActualBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         CedulaActualBuscar.setForeground(new java.awt.Color(204, 204, 204));
+        CedulaActualBuscar.setToolTipText("Ingrese la cedula del paciente registrado");
         CedulaActualBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualBuscarActionPerformed(evt);
