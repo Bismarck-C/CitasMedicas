@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.14 s <<< FAILURE! - in com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest
+testAdd  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Paciente agregado> but was: <La cedula ingreasada YA se encuentra registrada>
+	at com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest.testAdd(PacienteControllerTest.java:38)
+
+testBuscar  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <208310449> but was: <Cedula: 208310449>
+	at com.una.citasmedicas.AdministracionPaciente.Controller.PacienteControllerTest.testBuscar(PacienteControllerTest.java:57)
+

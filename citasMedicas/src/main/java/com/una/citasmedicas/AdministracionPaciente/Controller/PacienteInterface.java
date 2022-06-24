@@ -6,8 +6,12 @@ public interface PacienteInterface {
 
     public String delete(String cedula);
 
-   public String[] buscar(String id);
+    public String[] buscar(String id);
 
-    public String modificar(String[] data , String cedula);
+    public String modificar(String[] data, String cedula);
+
+    public String retornarnumCitas(String cedula);
+
+    public String SumarUnaCita(String cedula);
 
 }
