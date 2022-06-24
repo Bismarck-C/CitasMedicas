@@ -4,6 +4,8 @@
  */
 package com.una.citasmedicas.model.controller.medico;
 
+import com.una.citasmedicas.model.medico.Medico;
+
 /**
  *
  * @author villa
@@ -11,7 +13,7 @@ package com.una.citasmedicas.model.controller.medico;
 public interface MedicoInterface {
     public String add(String[] data);
     public String modificar(String id,String[] data);
-    public String find(String id);
+    public Medico find(String id);
     public String[][] getAll();
     public String delete(String id);
 }
