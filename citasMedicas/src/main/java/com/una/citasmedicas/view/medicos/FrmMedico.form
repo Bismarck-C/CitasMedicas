@@ -490,14 +490,12 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jDate" pref="124" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="txtDireccionModificar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtCorreoModificar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtTelefonoModificar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtApellidoModificar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtNombreModificar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtEspecialidadModificar" alignment="0" pref="124" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtDireccionModificar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtCorreoModificar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtTelefonoModificar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtApellidoModificar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtNombreModificar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtEspecialidadModificar" alignment="0" pref="124" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
