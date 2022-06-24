@@ -4,13 +4,12 @@
  */
 package com.una.citasmedicas.view;
 
-
-
-
 import com.una.citasmedicas.view.Pacientes.FrmAgregarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmBuscarPaciente;
 import com.una.citasmedicas.view.Pacientes.FrmDeletePaciente;
 import com.una.citasmedicas.view.Pacientes.FrmModificarPaciente;
+import com.una.citasmedicas.view.Pacientes.FrmPaciente;
+import com.una.citasmedicas.view.citas.FrmCitas;
 
 import com.una.citasmedicas.view.medicos.FrmAgregarMedico;
 import com.una.citasmedicas.view.medicos.FrmBuscarMedico;
@@ -28,26 +27,31 @@ import com.una.citasmedicas.view.usuarios.FrmModificarUsuario;
  * @author PC
  */
 public class MDIMainUI extends javax.swing.JFrame {
+
+    
     FrmAgregarMedico frmAgregarMedico;
     FrmBuscarMedico frmBuscarMedico;
     FrmModificarMedico frmModificarMedico;
     FrmEliminarMedico frmEliminarMedico;
     FrmMedico frmMedico;
    
-    
+   
     FrmAgregarPaciente frmAgregarPaciente;
     FrmBuscarPaciente frmBuscarPaciente;
     FrmModificarPaciente frmModificarPaciente;
     FrmDeletePaciente frmEliminarPaciente;
-    
+    FrmPaciente frmPaciente;
 
     FrmEliminarUsuario frmEliminarUsuario;
     FrmAgregarUsuario frmAgregarUsuario;
     FrmModificarUsuario frmModificarUsuario;
     FrmJtable frmMostrarUsuario;
-   
+    
+    FrmCitas frmCitas;
+
     /**
      * Creates new form MDIMainUI
+     *
      * @throws java.lang.Exception
      */
     public MDIMainUI() throws Exception {
@@ -56,42 +60,43 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmBuscarMedico = new FrmBuscarMedico();
         frmModificarMedico = new FrmModificarMedico();
         frmEliminarMedico = new FrmEliminarMedico();
-        
-        frmAgregarPaciente  = new FrmAgregarPaciente();
-        frmBuscarPaciente  = new FrmBuscarPaciente();
-        frmModificarPaciente  = new FrmModificarPaciente();
-        frmEliminarPaciente  = new FrmDeletePaciente();
-        
-        
+
+        frmAgregarPaciente = new FrmAgregarPaciente();
+        frmBuscarPaciente = new FrmBuscarPaciente();
+        frmModificarPaciente = new FrmModificarPaciente();
+        frmEliminarPaciente = new FrmDeletePaciente();
+        frmPaciente = new FrmPaciente();
+
         frmEliminarUsuario = new FrmEliminarUsuario();
         frmAgregarUsuario = new FrmAgregarUsuario();
         frmModificarUsuario = new FrmModificarUsuario();
         frmMostrarUsuario = new FrmJtable();
         
+        frmCitas = new FrmCitas();
+
         initComponents();
         this.desktopPane.add(frmMedico);
         this.desktopPane.add(frmAgregarMedico);
         this.desktopPane.add(frmModificarMedico);
         this.desktopPane.add(frmBuscarMedico);
         this.desktopPane.add(frmEliminarMedico);
-        
+
         this.desktopPane.add(frmEliminarPaciente);
         this.desktopPane.add(frmModificarPaciente);
         this.desktopPane.add(frmAgregarPaciente);
         this.desktopPane.add(frmBuscarPaciente);
-        
+        this.desktopPane.add(frmPaciente);
+
         this.desktopPane.add(frmEliminarUsuario);
         this.desktopPane.add(frmAgregarUsuario);
         this.desktopPane.add(frmModificarUsuario);
         this.desktopPane.add(frmMostrarUsuario);
+        
+        this.desktopPane.add(frmCitas);
+        
+        
         this.setExtendedState(MAXIMIZED_BOTH);
-     
-      
-        
-        
-        
-        
-         
+
     }
 
     /**
@@ -144,6 +149,8 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuCitas = new javax.swing.JMenu();
+        jMenu12 = new javax.swing.JMenu();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenuAbout = new javax.swing.JMenu();
         jMenuSalir = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -420,6 +427,19 @@ public class MDIMainUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenuUsuarios);
 
         jMenuCitas.setText("Citas");
+
+        jMenu12.setText("Regitrar Cita");
+
+        jMenuItem13.setText("Ir");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu12.add(jMenuItem13);
+
+        jMenuCitas.add(jMenu12);
+
         jMenuBar1.add(jMenuCitas);
 
         jMenuAbout.setText("About");
@@ -452,7 +472,7 @@ public class MDIMainUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
         );
 
         pack();
@@ -489,23 +509,23 @@ public class MDIMainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       frmAgregarUsuario.setVisible(true);
+        frmAgregarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-      frmEliminarUsuario.setVisible(true);
+        frmEliminarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuUsuariosActionPerformed
-        
+
     }//GEN-LAST:event_jMenuUsuariosActionPerformed
 
     private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
-      
+
     }//GEN-LAST:event_jMenu5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-      frmModificarUsuario.setVisible(true);
+        frmModificarUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
@@ -515,7 +535,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
-        
+
         frmAgregarPaciente.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
@@ -526,17 +546,17 @@ public class MDIMainUI extends javax.swing.JFrame {
 
     private void jMenu10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu10ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jMenu10ActionPerformed
 
     private void jMenu11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu11ActionPerformed
         // TODO add your handling code here:
-     
+
     }//GEN-LAST:event_jMenu11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
-          frmModificarPaciente.setVisible(true);
+        frmModificarPaciente.setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void buttonCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCitasActionPerformed
@@ -544,13 +564,13 @@ public class MDIMainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonCitasActionPerformed
 
     private void buttonMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMedicoActionPerformed
+        // TODO add your handling code here:
         frmMedico.setVisible(true);
-        
-        
     }//GEN-LAST:event_buttonMedicoActionPerformed
 
     private void buttonPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPacientesActionPerformed
         // TODO add your handling code here:
+        frmPaciente.setVisible(true);
     }//GEN-LAST:event_buttonPacientesActionPerformed
 
     private void buttonUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUsuariosActionPerformed
@@ -562,6 +582,9 @@ public class MDIMainUI extends javax.swing.JFrame {
         frmMostrarUsuario.mostrarTabla();
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        frmCitas.setVisible(true);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -578,6 +601,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
+    private javax.swing.JMenu jMenu12;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -594,6 +618,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;

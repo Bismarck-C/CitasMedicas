@@ -5,6 +5,7 @@ public class PacienteEntity extends Persona {
 
     private String personaContacto;
     private String numeroContacto;
+    private short numeroCitas;
 
     public PacienteEntity() {
         super();
@@ -12,6 +13,7 @@ public class PacienteEntity extends Persona {
     
     public PacienteEntity(String[] data) {
         super();
+        
         this.setCedula(data[0]);
         this.setNombre(data[1]);
         this.setApellidos(data[2]);
@@ -21,6 +23,7 @@ public class PacienteEntity extends Persona {
         this.setFechaNacimiento(data[6]);         
         this.personaContacto = data[7];
         this.numeroContacto = data[8];
+        this.numeroCitas = 0;
     }
  
     public String getPersonaContacto() {
@@ -37,6 +40,14 @@ public class PacienteEntity extends Persona {
 
     public void setNumeroContacto(String numeroContacto) {
         this.numeroContacto = numeroContacto;
+    }
+
+    public short getNumeroCitas() {
+        return numeroCitas;
+    }
+
+    public void setNumeroCitas(short numeroCitas) {
+        this.numeroCitas = numeroCitas;
     }
     
 }

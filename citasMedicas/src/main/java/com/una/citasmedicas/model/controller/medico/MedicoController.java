@@ -40,14 +40,14 @@ public class MedicoController implements MedicoInterface {
         return response;
     }
     @Override
-      public String find(String id) {
+      public Medico find(String id) {
           String response = "No se encontro el medico";
         try {
             if(medicoC.exist(id)){
-                return medicoC.find(id).toString();
+                return medicoC.find(id);
                 
             }else{
-             return response;
+             return null;
             }
         } catch (Exception ex) {
             Logger.getLogger(MedicoController.class.getName()).log(Level.SEVERE, null, ex);

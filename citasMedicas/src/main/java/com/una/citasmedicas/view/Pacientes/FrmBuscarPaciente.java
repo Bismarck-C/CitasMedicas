@@ -27,17 +27,15 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         BuscarBuscar = new javax.swing.JButton();
         CedulaActualBuscar = new javax.swing.JTextField();
-        CancelarBuscar = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        CancelarBuscarbotton = new javax.swing.JButton();
+        jLabel1a = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Cedula:");
+        jLabel2.setText("Cedula Actual:");
         jLabel2.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Buscar Pacientes ");
 
@@ -52,71 +50,65 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         });
 
         CedulaActualBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        CedulaActualBuscar.setForeground(new java.awt.Color(204, 204, 204));
-        CedulaActualBuscar.setToolTipText("Ingrese la cedula del paciente registrado");
+        CedulaActualBuscar.setToolTipText("Agregue la cedula que quiere buscar");
         CedulaActualBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualBuscarActionPerformed(evt);
             }
         });
 
-        CancelarBuscar.setBackground(new java.awt.Color(255, 51, 0));
-        CancelarBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        CancelarBuscar.setForeground(new java.awt.Color(0, 0, 0));
-        CancelarBuscar.setText("Cancelar");
-        CancelarBuscar.addActionListener(new java.awt.event.ActionListener() {
+        CancelarBuscarbotton.setBackground(new java.awt.Color(255, 51, 0));
+        CancelarBuscarbotton.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        CancelarBuscarbotton.setForeground(new java.awt.Color(0, 0, 0));
+        CancelarBuscarbotton.setText("Cancelar");
+        CancelarBuscarbotton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CancelarBuscarActionPerformed(evt);
+                CancelarBuscarbottonActionPerformed(evt);
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Ingrese la cedula del paciente a buscar");
+        jLabel1a.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel1a.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1a.setText("Ingrese la cedula del paciente a buscar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(CancelarBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(CedulaActualBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(91, 91, 91)
-                                        .addComponent(BuscarBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel1a)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(CancelarBuscarbotton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BuscarBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(CedulaActualBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(92, 92, 92))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(jLabel1a)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CedulaActualBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CancelarBuscar)
+                    .addComponent(CancelarBuscarbotton)
                     .addComponent(BuscarBuscar))
-                .addGap(74, 74, 74))
+                .addGap(0, 117, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,39 +117,41 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
     private void BuscarBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarBuscarActionPerformed
         boolean band = true;
         String Cedula = CedulaActualBuscar.getText();
-
         if (Cedula.isBlank()) {
             band = false;
         }
         if (band) {
-            String[] reponse = paciente.buscar(Cedula);
+            String reponse =  "Cedula: "+paciente.buscar(Cedula).getCedula()+"\n"+
+                    "Nombre: "+paciente.buscar(Cedula).getNombre()+"\n"+"Apellidos: "+paciente.buscar(Cedula).getApellidos()+"\n"+
+                    "Telefono: "+paciente.buscar(Cedula).getTelefono()+"\n"+ "Correo: "+paciente.buscar(Cedula).getCorreo()+"\n"+
+                    "Direccion: "+paciente.buscar(Cedula).getDireccion()+"\n"+"Fecha Nacimiento: "+paciente.buscar(Cedula).getFechaNacimiento()+"\n"+
+                    "Persona en caso de emergencia: "+paciente.buscar(Cedula).getPersonaContacto()+"\n"+"numero de emergencia: "+paciente.buscar(Cedula).getNumeroContacto()+"\n";
+
             JOptionPane.showMessageDialog(this, reponse);
         } else {
             JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
         clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_BuscarBuscarActionPerformed
-
-    private void CedulaActualBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaActualBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CedulaActualBuscarActionPerformed
-   
     private void clearFrm() {
         CedulaActualBuscar.setText("");
     }
-    private void CancelarBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBuscarActionPerformed
-        this.setVisible(false);
-    }//GEN-LAST:event_CancelarBuscarActionPerformed
+    private void CedulaActualBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaActualBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CedulaActualBuscarActionPerformed
 
+    private void CancelarBuscarbottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBuscarbottonActionPerformed
+         clearFrm();
+        this.setVisible(false);
+    }//GEN-LAST:event_CancelarBuscarbottonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarBuscar;
-    private javax.swing.JButton CancelarBuscar;
+    private javax.swing.JButton CancelarBuscarbotton;
     private javax.swing.JTextField CedulaActualBuscar;
+    private javax.swing.JLabel jLabel1a;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

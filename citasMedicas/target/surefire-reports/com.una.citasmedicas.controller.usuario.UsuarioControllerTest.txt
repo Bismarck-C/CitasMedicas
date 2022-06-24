@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.una.citasmedicas.controller.usuario.UsuarioControllerTest
+-------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! - in com.una.citasmedicas.controller.usuario.UsuarioControllerTest
+=======
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.024 s <<< FAILURE! - in com.una.citasmedicas.controller.usuario.UsuarioControllerTest
+>>>>>>> main
+testModificar  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <> but was: <No se encontro un usuario igual>
+	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testModificar(UsuarioControllerTest.java:65)
+
+<<<<<<< HEAD
+testEliminar  Time elapsed: 0.002 s  <<< FAILURE!
+=======
+testEliminar  Time elapsed: 0.001 s  <<< FAILURE!
+>>>>>>> main
+org.opentest4j.AssertionFailedError: expected: <> but was: <Error! intente nuevamente>
+	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testEliminar(UsuarioControllerTest.java:80)
+
+testMostrar  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at com.una.citasmedicas.controller.usuario.UsuarioControllerTest.testMostrar(UsuarioControllerTest.java:94)
+

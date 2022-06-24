@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.una.citasmedicas.controller.Paciente.PacienteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.138 s <<< FAILURE! - in com.una.citasmedicas.controller.Paciente.PacienteControllerTest
+buscar  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.NullPointerException: Cannot load from object array because "result" is null
+	at com.una.citasmedicas.controller.Paciente.PacienteControllerTest.buscar(PacienteControllerTest.java:62)
+
+testModificar  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Se modifico> but was: <Cedula ingresada no se encuentra agregada>
+	at com.una.citasmedicas.controller.Paciente.PacienteControllerTest.testModificar(PacienteControllerTest.java:51)
+
+testDelete  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Paciente eliminado> but was: <La cedula ingreasada no se encuentra registrada>
+	at com.una.citasmedicas.controller.Paciente.PacienteControllerTest.testDelete(PacienteControllerTest.java:71)
+

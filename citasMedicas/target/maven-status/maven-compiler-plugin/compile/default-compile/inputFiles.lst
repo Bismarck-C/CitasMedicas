@@ -1,37 +1,80 @@
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioFileAdapter.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmBuscarPaciente.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmModificarMedico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\MedicoContainer.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmEliminarMedico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteContainer.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoInterface.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteEntity.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteInterface.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteController.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioInterface.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\XmlAdapter.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmDeletePaciente.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\Medico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioController.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\citas\FrmCitas.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmAgregarUsuario.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmagregarPaciente.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\administracion\Usuario.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioContainer.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\controller\CitaInterface.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\Persona.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\controller\CitaController.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmEliminarUsuario.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmBuscarMedico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmModificarUsuario.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\FrmLogin.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\Cita.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoController.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmMedico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\LoginInterface.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmModificarPaciente.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\CitasMedicas.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\CitaContainer.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmAgregarMedico.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\MDIMainUI.java
-D:\ING. En sistemas de información\Segundo Año\SEMESTRE l\Progra ll\Proyectos\Proyecto 2 progra II\Citas proyecto\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmJtable.java
+<<<<<<< HEAD
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\FrmLogin.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\MDIMainUI.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmBuscarPaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\LoginInterface.java
+<<<<<<< Updated upstream
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\Citas.java
+=======
+>>>>>>> Stashed changes
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmBuscarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\CitasMedicas.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmDeletePaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmModificarUsuario.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmModificarPaciente.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\citas\FrmCitas.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmJtable.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\Medico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmEliminarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioController.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\XmlAdapter.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteInterface.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmAgregarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmModificarMedico.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmEliminarUsuario.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioFileAdapter.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\MedicoContainer.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\Persona.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteEntity.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\Usuario.java
+<<<<<<< Updated upstream
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\CitaContainer.java
+=======
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmPaciente.java
+>>>>>>> Stashed changes
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmAgregarUsuario.java
+C:\Users\vsj94\OneDrive\Escritorio\progra II\Proyecto@@\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmAgregarPaciente.java
+=======
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmMedico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmBuscarPaciente.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmBuscarMedico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\MDIMainUI.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteController.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\Persona.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\Cita.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\Medico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioFileAdapter.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmEliminarMedico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmAgregarUsuario.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\citas\CitaContainer.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\Usuario.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmDeletePaciente.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\LoginInterface.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioController.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmEliminarUsuario.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Controller\PacienteInterface.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoInterface.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\XmlAdapter.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\controller\usuario\UsuarioInterface.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\controller\medico\MedicoController.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmAgregarPaciente.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\Pacientes\FrmModificarPaciente.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\administracion\UsuarioContainer.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmJtable.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\citas\FrmCitas.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\FrmLogin.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmAgregarMedico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\model\medico\MedicoContainer.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteContainer.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\AdministracionPaciente\Model\PacienteEntity.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\medicos\FrmModificarMedico.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\CitasMedicas.java
+C:\Users\villa\OneDrive\Escritorio\CitasMedicas\citasMedicas\src\main\java\com\una\citasmedicas\view\usuarios\FrmModificarUsuario.java
+>>>>>>> main
