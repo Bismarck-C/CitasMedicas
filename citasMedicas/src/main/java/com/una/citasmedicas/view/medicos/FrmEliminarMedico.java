@@ -41,6 +41,12 @@ public class FrmEliminarMedico extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Eliminar Medico");
 
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
+
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel2.setText("Ingrese la Cédula");
 
@@ -110,8 +116,13 @@ public class FrmEliminarMedico extends javax.swing.JInternalFrame {
     private void buttonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEliminarActionPerformed
         String id = txtId.getText();
         JOptionPane.showMessageDialog(this, medico.delete(id));
+        cleanFrm();
         
     }//GEN-LAST:event_buttonEliminarActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
     public void cleanFrm(){
         this.txtId.setText("");
     }
