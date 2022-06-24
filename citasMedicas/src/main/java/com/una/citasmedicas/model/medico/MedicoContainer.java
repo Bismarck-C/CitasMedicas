@@ -110,20 +110,21 @@ public class MedicoContainer extends XmlAdapter {
         Document doc=builder.parse(this.url);
         doc.getDocumentElement().normalize();
         ArrayList<Medico> list=new ArrayList<>();
-        NodeList medicos=doc.getDocumentElement().getElementsByTagName("categoria");
+        NodeList medicos=doc.getDocumentElement().getElementsByTagName("medico");
         for(int i=0;i<medicos.getLength();i++){
-            Medico medico=new Medico();
-            medico.setCedula(medicos.item(i).getChildNodes().item(0).getTextContent());
-            medico.setNombre(medicos.item(i).getChildNodes().item(1).getTextContent());
-            medico.setApellidos(medicos.item(i).getChildNodes().item(2).getTextContent());
-            medico.setTelefono(medicos.item(i).getChildNodes().item(3).getTextContent());
-            medico.setCorreo(medicos.item(i).getChildNodes().item(4).getTextContent());
-            medico.setDireccion(medicos.item(i).getChildNodes().item(5).getTextContent());
-            medico.setFechaNacimiento(medicos.item(i).getChildNodes().item(6).getTextContent());
-            medico.setEspecialidad(medicos.item(i).getChildNodes().item(7).getTextContent());
+                String[] datos = new String[8];
+                datos[0] = medicos.item(i).getChildNodes().item(0).getTextContent();
+                datos[1] = medicos.item(i).getChildNodes().item(1).getTextContent();
+                datos[2] = medicos.item(i).getChildNodes().item(2).getTextContent();
+                datos[3] = medicos.item(i).getChildNodes().item(3).getTextContent();
+                datos[4] = medicos.item(i).getChildNodes().item(4).getTextContent();
+                datos[5] = medicos.item(i).getChildNodes().item(5).getTextContent();
+                datos[6] = medicos.item(i).getChildNodes().item(6).getTextContent();
+                datos[7] = medicos.item(i).getChildNodes().item(7).getTextContent();
+                Medico medic=new Medico(datos);
             
             
-            list.add(medico);
+            list.add(medic);
         }
         return list;        
     }

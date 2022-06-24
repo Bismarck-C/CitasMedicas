@@ -595,7 +595,7 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonMedico;
     private javax.swing.JButton buttonPacientes;
     private javax.swing.JButton buttonUsuarios;
-    private javax.swing.JDesktopPane desktopPane;
+    public static javax.swing.JDesktopPane desktopPane;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JMenu jMenu1;

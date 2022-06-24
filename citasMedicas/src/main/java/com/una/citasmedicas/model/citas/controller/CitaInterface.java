@@ -9,6 +9,7 @@ package com.una.citasmedicas.model.citas.controller;
  * @author Eithel
  */
 public interface CitaInterface {
+    public String agregar(String[] data);
     public String[][] Citas()throws Exception;
     public String nombrePaciente(String id)throws Exception;
     public String nombreMedico(String id)throws Exception;

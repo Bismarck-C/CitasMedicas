@@ -18,7 +18,18 @@ public class CitaContainer extends XmlAdapter{
     public CitaContainer() throws Exception {
         super("Citas");
     }
-    
+    public boolean exist(String id)throws Exception{
+        DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        Document doc=builder.parse(this.url);
+        doc.getDocumentElement().normalize();
+        NodeList categories=doc.getDocumentElement().getElementsByTagName("cita");
+        for(int i=0;i<categories.getLength();i++){
+            if(categories.item(i).getChildNodes().item(0).getTextContent().equals(id)){
+                return true;
+            }
+        }
+        return false;
+    }
     public boolean agregar(Cita cita) throws Exception{
     
         DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();

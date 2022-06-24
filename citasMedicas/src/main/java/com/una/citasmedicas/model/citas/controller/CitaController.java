@@ -20,6 +20,7 @@ public class CitaController implements CitaInterface{
         cCita = new CitaContainer();
     }
     
+    
     @Override
     public String[][] Citas() throws Exception {
         ArrayList<Cita> array = cCita.mostrarCita();
@@ -37,7 +38,22 @@ public class CitaController implements CitaInterface{
         }
         return matriz;   
     }
+    @Override
+    public String agregar(String[] data) {
+        String response="El elemento ya fue registrados previamente";
+        try{
+            if(!cCita.exist(data[0])){
+                Cita cita = new Cita(data);
+                cCita.agregar(cita);
+                response="Guardado exitosamente!";
+            }
 
+        }catch(Exception ex){
+            response="Se ha producido un error, contacte al administrador del sistema";
+            ex.printStackTrace();
+        }
+        return response;
+    }
     @Override
     public String nombrePaciente(String id) throws Exception {
         PacienteContainer cPaciente = new PacienteContainer();
@@ -50,5 +66,5 @@ public class CitaController implements CitaInterface{
         return cMedic.find(id).getNombre();
 
     }
-    
+
 }
