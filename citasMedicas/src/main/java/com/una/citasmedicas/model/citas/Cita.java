@@ -11,14 +11,14 @@ import com.una.citasmedicas.model.medico.Medico;
  *
  * @author villa
  */
-public class Citas {
+public class Cita {
     private Integer numCitas;
     private Medico doctor;
     private PacienteEntity paciente;
     private String fecha;
     private String hora;
 
-    public Citas(Integer numCitas, Medico doctor, PacienteEntity paciente,String fecha, String hora) {
+    public Cita(Integer numCitas, Medico doctor, PacienteEntity paciente,String fecha, String hora) {
         this.numCitas = numCitas;
         this.doctor = doctor;
         this.paciente = paciente;
