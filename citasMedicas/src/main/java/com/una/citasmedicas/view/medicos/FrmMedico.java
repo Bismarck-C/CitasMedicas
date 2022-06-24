@@ -801,6 +801,7 @@ public class FrmMedico extends javax.swing.JInternalFrame {
         String id = txtId.getText();
         JOptionPane.showMessageDialog(this, medico.delete(id));
         cleanFrm();
+        
 
     }//GEN-LAST:event_buttonEliminarActionPerformed
 

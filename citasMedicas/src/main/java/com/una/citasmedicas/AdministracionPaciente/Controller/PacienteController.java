@@ -52,21 +52,23 @@ public class PacienteController implements PacienteInterface {
         String[] vector = new String[9];
 
         try {
-            PacienteEntity paciente = objContainer.buscar(id);
-            if (paciente != null) {
+            if (objContainer.exist(id)) {
+                PacienteEntity paciente = objContainer.buscar(id);
+                if (paciente != null) {
 
-                vector[0] = "Cedula: " + String.valueOf(paciente.getCedula());
-                vector[1] = "Nombre: " + String.valueOf(paciente.getNombre());
-                vector[2] = "apellidos: " + String.valueOf(paciente.getApellidos());
-                vector[3] = "Numero telefonico: " + String.valueOf(paciente.getTelefono());
-                vector[4] = "Correo Electronico: " + String.valueOf(paciente.getCorreo());
-                vector[5] = "Dirrecion de domicilio: " + String.valueOf(paciente.getDireccion());
-                vector[6] = "Fecha de nacimiento: " + String.valueOf(paciente.getFechaNacimiento());
-                vector[7] = "Persona en caso de emergecia: " + String.valueOf(paciente.getPersonaContacto());
-                vector[8] = "Numero en caso de emergencia: " + String.valueOf(paciente.getNumeroContacto());
+                    vector[0] = "Cedula: " + String.valueOf(paciente.getCedula());
+                    vector[1] = "Nombre: " + String.valueOf(paciente.getNombre());
+                    vector[2] = "apellidos: " + String.valueOf(paciente.getApellidos());
+                    vector[3] = "Numero telefonico: " + String.valueOf(paciente.getTelefono());
+                    vector[4] = "Correo Electronico: " + String.valueOf(paciente.getCorreo());
+                    vector[5] = "Dirrecion de domicilio: " + String.valueOf(paciente.getDireccion());
+                    vector[6] = "Fecha de nacimiento: " + String.valueOf(paciente.getFechaNacimiento());
+                    vector[7] = "Persona en caso de emergecia: " + String.valueOf(paciente.getPersonaContacto());
+                    vector[8] = "Numero en caso de emergencia: " + String.valueOf(paciente.getNumeroContacto());
 
-            } else {
-                vector = null;
+                } else {
+                    vector = null;
+                }
             }
         } catch (Exception ex) {
             vector = null;
@@ -128,6 +130,4 @@ public class PacienteController implements PacienteInterface {
         return respuesta;
     }
 
-    
 }
-   

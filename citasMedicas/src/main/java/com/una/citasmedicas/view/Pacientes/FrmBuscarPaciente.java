@@ -31,13 +31,11 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Cedula:");
         jLabel2.setToolTipText("");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Buscar Pacientes ");
 
@@ -52,8 +50,11 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         });
 
         CedulaActualBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+<<<<<<< Updated upstream
         CedulaActualBuscar.setForeground(new java.awt.Color(204, 204, 204));
         CedulaActualBuscar.setToolTipText("Ingrese la cedula del paciente registrado");
+=======
+>>>>>>> Stashed changes
         CedulaActualBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualBuscarActionPerformed(evt);
@@ -71,7 +72,6 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ingrese la cedula del paciente a buscar");
 
