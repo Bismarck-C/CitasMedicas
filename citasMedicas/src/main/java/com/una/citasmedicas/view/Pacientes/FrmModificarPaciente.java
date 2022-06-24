@@ -2,6 +2,8 @@ package com.una.citasmedicas.view.Pacientes;
 
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class FrmModificarPaciente extends javax.swing.JInternalFrame {
@@ -24,7 +26,6 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
 
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        NacimientoModificar = new javax.swing.JTextField();
         TelefonoModificar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -44,6 +45,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         PersonaModificar = new javax.swing.JTextField();
         Modificar = new javax.swing.JButton();
+        DateModificar = new com.toedter.calendar.JDateChooser();
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -53,12 +55,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Persona de Contacto:");
 
-        NacimientoModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NacimientoModificarActionPerformed(evt);
-            }
-        });
-
+        TelefonoModificar.setToolTipText("Ingrese el telefono que quiere cambiar");
         TelefonoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoModificarActionPerformed(evt);
@@ -74,6 +71,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Correo:");
 
+        NombreModificar.setToolTipText("Ingrese el nombre que quiere cambiar");
         NombreModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreModificarActionPerformed(evt);
@@ -88,6 +86,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Modificar Pacientes  ");
 
+        NumeroModificar.setToolTipText("Ingrese el numero telefonico que quiere cambiar");
         NumeroModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumeroModificarActionPerformed(evt);
@@ -107,12 +106,14 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel11.setText("Datos que desea modificar");
         jLabel11.setToolTipText("");
 
+        cedulaModificar.setToolTipText("Ingrese la cedula para modificar valores");
         cedulaModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cedulaModificarActionPerformed(evt);
             }
         });
 
+        correoModificar.setToolTipText("Ingrese el correo que quiere cambiar");
         correoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 correoModificarActionPerformed(evt);
@@ -129,6 +130,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        ApellidoModificar.setToolTipText("Ingrese el apellido que quiere cambiar");
         ApellidoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ApellidoModificarActionPerformed(evt);
@@ -139,6 +141,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Apellidos:");
 
+        DireccionModificar.setToolTipText("Ingrese la direccion que quiere cambiar");
         DireccionModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DireccionModificarActionPerformed(evt);
@@ -149,6 +152,7 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Numero de emergencia");
 
+        PersonaModificar.setToolTipText("Ingrese el nombre de la persona ");
         PersonaModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaModificarActionPerformed(evt);
@@ -162,6 +166,17 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         Modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarActionPerformed(evt);
+            }
+        });
+
+        DateModificar.setToolTipText("Ingrese la fecha que quiere cambiar");
+        DateModificar.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                DateModificarAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -212,22 +227,17 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(TelefonoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(NacimientoModificar)
-                                .addComponent(DireccionModificar)
-                                .addComponent(correoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(PersonaModificar)
-                                .addComponent(NumeroModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(NombreModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ApellidoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TelefonoModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(DireccionModificar, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(correoModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(PersonaModificar, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NumeroModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(NombreModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(ApellidoModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(DateModificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -261,14 +271,11 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(DireccionModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(NacimientoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(4, 4, 4)))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                            .addComponent(DateModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
+                        .addGap(4, 4, 4)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -292,8 +299,71 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TelefonoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoModificarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_TelefonoModificarActionPerformed
+
+    private void NombreModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_NombreModificarActionPerformed
+
+    private void NumeroModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_NumeroModificarActionPerformed
+
+    private void cedulaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_cedulaModificarActionPerformed
+
+    private void CancelarModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarModificarActionPerformed
+        clearFrm();
+        this.setVisible(false);//
+    }//GEN-LAST:event_CancelarModificarActionPerformed
+
+    private void ApellidoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_ApellidoModificarActionPerformed
+
+    private void DireccionModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DireccionModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_DireccionModificarActionPerformed
+
+    private void PersonaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonaModificarActionPerformed
+        // TODO add your handling code here://
+    }//GEN-LAST:event_PersonaModificarActionPerformed
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+        boolean band = true;//
+        String fecha;
+        fecha = DateModificar.getDate().toString();
+        Date tempDate = DateModificar.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        fecha = sdf.format(tempDate);
+
+        String[] data = new String[8];
+
+        String cedula = cedulaModificar.getText();
+        data[0] = NombreModificar.getText();
+        data[1] = ApellidoModificar.getText();
+        data[2] = TelefonoModificar.getText();
+        data[3] = correoModificar.getText();
+        data[4] = DireccionModificar.getText();
+        data[5] = fecha;
+        data[6] = PersonaModificar.getText();
+        data[7] = NumeroModificar.getText();
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].isEmpty()) {
+                band = false;
+            }
+        }
+        if (band) {
+            String reponse = paciente.modificar(data, cedula);
+            JOptionPane.showMessageDialog(this, reponse);
+        } else {
+            JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        clearFrm();
+        this.setVisible(false);
+    }//GEN-LAST:event_ModificarActionPerformed
     private void clearFrm() {
         CancelarModificar.setText("");
         NombreModificar.setText("");
@@ -301,86 +371,24 @@ public class FrmModificarPaciente extends javax.swing.JInternalFrame {
         TelefonoModificar.setText("");
         correoModificar.setText("");
         DireccionModificar.setText("");
-        NacimientoModificar.setText("");
+        DateModificar.setDate(null);
         PersonaModificar.setText("");
         NumeroModificar.setText("");
     }
-    private void NombreModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NombreModificarActionPerformed
-
-    private void NumeroModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumeroModificarActionPerformed
-
-    private void cedulaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cedulaModificarActionPerformed
-
-    private void CancelarModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarModificarActionPerformed
-        clearFrm();
-        this.setVisible(false);
-    }//GEN-LAST:event_CancelarModificarActionPerformed
-
-    private void ApellidoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ApellidoModificarActionPerformed
-
-    private void DireccionModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DireccionModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DireccionModificarActionPerformed
-
-    private void PersonaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonaModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PersonaModificarActionPerformed
-
-    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
-        // TODO add your handling code here:
-        boolean band = true;
-        String[] data = new String[8];
-        
-        String cedula = cedulaModificar.getText();
-        data[0] = NombreModificar.getText();
-        data[1] = ApellidoModificar.getText();
-        data[2] = TelefonoModificar.getText();
-        data[3] = correoModificar.getText();
-        data[4] = DireccionModificar.getText();
-        data[5] = NacimientoModificar.getText();
-        data[6] = PersonaModificar.getText();
-        data[7] = NumeroModificar.getText();
-
-        for (int i = 0; i < data.length; i++) {
-            if (data[i].isEmpty()) {
-                band = false;
-            }
-        }
-        if (band) {
-            String reponse = paciente.modificar(data,cedula);
-            JOptionPane.showMessageDialog(this, reponse);
-        } else {
-            JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-
-        clearFrm();
-        this.setVisible(false);
-
-    }//GEN-LAST:event_ModificarActionPerformed
-
     private void correoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoModificarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_correoModificarActionPerformed
 
-    private void NacimientoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NacimientoModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NacimientoModificarActionPerformed
-
+    private void DateModificarAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_DateModificarAncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_DateModificarAncestorAdded
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ApellidoModificar;
     private javax.swing.JButton CancelarModificar;
+    private com.toedter.calendar.JDateChooser DateModificar;
     private javax.swing.JTextField DireccionModificar;
     private javax.swing.JButton Modificar;
-    private javax.swing.JTextField NacimientoModificar;
     private javax.swing.JTextField NombreModificar;
     private javax.swing.JTextField NumeroModificar;
     private javax.swing.JTextField PersonaModificar;

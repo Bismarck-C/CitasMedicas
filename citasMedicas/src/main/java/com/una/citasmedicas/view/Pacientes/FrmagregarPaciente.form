@@ -30,31 +30,22 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="nombre" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cedula" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="nombre" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cedula" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                               <Component id="CancelarAgregar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -160,11 +151,17 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="NumeroAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Numero en caso de emergencia"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NumeroAgregarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="CedulaAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese su cedula"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CedulaAgregarActionPerformed"/>
       </Events>
@@ -179,11 +176,17 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="PersonaAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Nombre de persona en caso de emergencia"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PersonaAgregarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="NombreAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese su primer y segundo nombre"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombreAgregarActionPerformed"/>
       </Events>
@@ -198,6 +201,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="ApellidoAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese sus dos apellidos"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ApellidoAgregarActionPerformed"/>
       </Events>
@@ -220,6 +226,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TelefonoAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese su numero telefonico personal"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TelefonoAgregarActionPerformed"/>
       </Events>
@@ -260,6 +269,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="DireccionAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese su dirreccion de recidencia"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DireccionAgregarActionPerformed"/>
       </Events>
@@ -291,8 +303,14 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Ingreso de Pacientes "/>
       </Properties>
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="TituloAgregarAncestorAdded"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="CorreoAgregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Ingrese su correo actual"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CorreoAgregarActionPerformed"/>
       </Events>
@@ -307,6 +325,12 @@
       </Properties>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="Dateagregar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="dia/mes/a&#xf1;o"/>
+      </Properties>
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="DateagregarAncestorAdded"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

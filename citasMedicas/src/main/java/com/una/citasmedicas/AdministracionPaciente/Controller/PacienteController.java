@@ -2,6 +2,11 @@ package com.una.citasmedicas.AdministracionPaciente.Controller;
 
 import com.una.citasmedicas.AdministracionPaciente.Model.PacienteContainer;
 import com.una.citasmedicas.AdministracionPaciente.Model.PacienteEntity;
+import com.una.citasmedicas.model.controller.medico.MedicoController;
+import com.una.citasmedicas.model.medico.Medico;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PacienteController implements PacienteInterface {
 
@@ -12,7 +17,7 @@ public class PacienteController implements PacienteInterface {
     }
 
     @Override
-    public String add(String[] data) {
+    public String add(String[] data) {  //agregar un paciente al container
         String Respuesta = "error";
         try {
             if (objContainer.exist(data[0])) {
@@ -30,7 +35,7 @@ public class PacienteController implements PacienteInterface {
     }
 
     @Override
-    public String delete(String cedula) {
+    public String delete(String cedula) {  //Elimina el nodo
         String respuesta = "Error";
         try {
             if (objContainer.exist(cedula)) {
@@ -47,34 +52,20 @@ public class PacienteController implements PacienteInterface {
     }
 
     @Override
-    public String[] buscar(String id) {
-
-        String[] vector = new String[9];
-
+    public PacienteEntity buscar(String cedula) {
+            String respuesta = "Error";
         try {
-            if (objContainer.exist(id)) {
-                PacienteEntity paciente = objContainer.buscar(id);
-                if (paciente != null) {
-
-                    vector[0] = "Cedula: " + String.valueOf(paciente.getCedula());
-                    vector[1] = "Nombre: " + String.valueOf(paciente.getNombre());
-                    vector[2] = "apellidos: " + String.valueOf(paciente.getApellidos());
-                    vector[3] = "Numero telefonico: " + String.valueOf(paciente.getTelefono());
-                    vector[4] = "Correo Electronico: " + String.valueOf(paciente.getCorreo());
-                    vector[5] = "Dirrecion de domicilio: " + String.valueOf(paciente.getDireccion());
-                    vector[6] = "Fecha de nacimiento: " + String.valueOf(paciente.getFechaNacimiento());
-                    vector[7] = "Persona en caso de emergecia: " + String.valueOf(paciente.getPersonaContacto());
-                    vector[8] = "Numero en caso de emergencia: " + String.valueOf(paciente.getNumeroContacto());
-
-                } else {
-                    vector = null;
-                }
+            if(objContainer.exist(cedula)){
+                return objContainer.buscar(cedula);              
+            }else{
+             return null;
             }
         } catch (Exception ex) {
-            vector = null;
+           respuesta = "Se ha producido un error, contacte al administrador del sistema";
             ex.printStackTrace();
         }
-        return vector;
+        return null;
+
     }
 
     @Override
@@ -89,7 +80,6 @@ public class PacienteController implements PacienteInterface {
         } catch (Exception ex) {
             respuesta = "Se ha producido un error, contacte al administrador del sistema";
             ex.printStackTrace();
-
         }
         return respuesta;
     }
@@ -104,7 +94,6 @@ public class PacienteController implements PacienteInterface {
             } else {
                 respuesta = "Cedula ingresada no se encuentra agregada";
             }
-
         } catch (Exception ex) {
             respuesta = "Se ha producido un error, contacte al administrador del sistema";
             ex.printStackTrace();
@@ -115,7 +104,6 @@ public class PacienteController implements PacienteInterface {
     @Override
     public String SumarUnaCita(String cedula) {
         String respuesta = "Error";
-
         try {
             if (objContainer.exist(cedula)) {
                 objContainer.SumarUnaCita(cedula);
@@ -125,9 +113,33 @@ public class PacienteController implements PacienteInterface {
             }
         } catch (Exception ex) {
             respuesta = "Se ha producido un error, contacte al administrador del sistema";
-
         }
         return respuesta;
+    }
+
+    @Override
+    public String[][] getAll() {
+        try{
+            ArrayList<PacienteEntity> list=objContainer.getAll();
+            String[][] data=new String[list.size()][9];
+            for(int i=0;i<list.size();i++){
+                PacienteEntity aux=list.get(i);
+                data[i][0]=String.valueOf(aux.getCedula());
+                data[i][1]=aux.getNombre();
+                data[i][2]=aux.getApellidos();
+                data[i][3]=aux.getTelefono();
+                data[i][4]=aux.getCorreo();
+                data[i][5]=aux.getDireccion();
+                data[i][6]=aux.getFechaNacimiento();
+                data[i][7]=aux.getPersonaContacto();
+                data[i][8]=aux.getNumeroContacto();
+              
+            }
+            return data;
+        }catch(Exception ex){
+            ex.printStackTrace();
+            return null;            
+        }
     }
 
 }

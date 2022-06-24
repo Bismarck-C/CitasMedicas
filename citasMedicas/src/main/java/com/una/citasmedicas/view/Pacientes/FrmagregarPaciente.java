@@ -1,4 +1,5 @@
 package com.una.citasmedicas.view.Pacientes;
+
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
 import java.text.SimpleDateFormat;
@@ -20,6 +21,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         }
 
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -54,12 +56,14 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Correo:");
 
+        NumeroAgregar.setToolTipText("Numero en caso de emergencia");
         NumeroAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumeroAgregarActionPerformed(evt);
             }
         });
 
+        CedulaAgregar.setToolTipText("Ingrese su cedula");
         CedulaAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaAgregarActionPerformed(evt);
@@ -70,12 +74,14 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Apellidos:");
 
+        PersonaAgregar.setToolTipText("Nombre de persona en caso de emergencia");
         PersonaAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaAgregarActionPerformed(evt);
             }
         });
 
+        NombreAgregar.setToolTipText("Ingrese su primer y segundo nombre");
         NombreAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreAgregarActionPerformed(evt);
@@ -86,6 +92,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Telefono:");
 
+        ApellidoAgregar.setToolTipText("Ingrese sus dos apellidos");
         ApellidoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ApellidoAgregarActionPerformed(evt);
@@ -102,6 +109,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        TelefonoAgregar.setToolTipText("Ingrese su numero telefonico personal");
         TelefonoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoAgregarActionPerformed(evt);
@@ -126,6 +134,7 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        DireccionAgregar.setToolTipText("Ingrese su dirreccion de recidencia");
         DireccionAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DireccionAgregarActionPerformed(evt);
@@ -144,7 +153,17 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         TituloAgregar.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         TituloAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloAgregar.setText("Ingreso de Pacientes ");
+        TituloAgregar.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                TituloAgregarAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
+        CorreoAgregar.setToolTipText("Ingrese su correo actual");
         CorreoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CorreoAgregarActionPerformed(evt);
@@ -154,6 +173,17 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Numero de emergencia");
+
+        Dateagregar.setToolTipText("dia/mes/año");
+        Dateagregar.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                DateagregarAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -169,25 +199,19 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel10))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(nombre)
-                                            .addComponent(jLabel7)
-                                            .addComponent(cedula))
-                                        .addGap(0, 0, 0))))
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(nombre)
+                                        .addComponent(jLabel7)
+                                        .addComponent(cedula))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
-                                .addComponent(CancelarAgregar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                .addComponent(CancelarAgregar)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
@@ -256,35 +280,34 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NumeroAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_NumeroAgregarActionPerformed
 
     private void CedulaAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_CedulaAgregarActionPerformed
 
     private void PersonaAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonaAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_PersonaAgregarActionPerformed
 
     private void NombreAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_NombreAgregarActionPerformed
 
     private void ApellidoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_ApellidoAgregarActionPerformed
 
     private void GuardarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarAgregarActionPerformed
         boolean band = true;
-        
-         String fecha;
+
+        String fecha;
         fecha = Dateagregar.getDate().toString();
         Date tempDate = Dateagregar.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         fecha = sdf.format(tempDate);
-        
-        
+
         String[] data = new String[9];
         data[0] = CedulaAgregar.getText();
         data[1] = NombreAgregar.getText();
@@ -311,30 +334,39 @@ public class FrmAgregarPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_GuardarAgregarActionPerformed
 
     private void TelefonoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_TelefonoAgregarActionPerformed
 
     private void CancelarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarAgregarActionPerformed
+         clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_CancelarAgregarActionPerformed
- private void clearFrm() {
+    private void clearFrm() {
         CedulaAgregar.setText("");
         NombreAgregar.setText("");
         ApellidoAgregar.setText("");
         TelefonoAgregar.setText("");
         CorreoAgregar.setText("");
         DireccionAgregar.setText("");
-        Dateagregar.cleanup();     
+        Dateagregar.setDate(null);
         PersonaAgregar.setText("");
         NumeroAgregar.setText("");
     }
     private void DireccionAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DireccionAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_DireccionAgregarActionPerformed
 
     private void CorreoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoAgregarActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_CorreoAgregarActionPerformed
+
+    private void DateagregarAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_DateagregarAncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_DateagregarAncestorAdded
+
+    private void TituloAgregarAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_TituloAgregarAncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_TituloAgregarAncestorAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -2,6 +2,8 @@ package com.una.citasmedicas.view.Pacientes;
 
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class FrmPaciente extends javax.swing.JInternalFrame {
@@ -32,7 +34,6 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel14 = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        NacimientoAgregar = new javax.swing.JTextField();
         cedula = new javax.swing.JLabel();
         NombreAgregar = new javax.swing.JTextField();
         TituloAgregar = new javax.swing.JLabel();
@@ -53,6 +54,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         DireccionAgregar = new javax.swing.JTextField();
         PersonaAgregar = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        DateAgregar2 = new com.toedter.calendar.JDateChooser();
         jPanel4 = new javax.swing.JPanel();
         DireccionModificar = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -65,7 +67,6 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        NacimientoModificar = new javax.swing.JTextField();
         cedulaModificar = new javax.swing.JTextField();
         TelefonoModificar = new javax.swing.JTextField();
         correoModificar = new javax.swing.JTextField();
@@ -76,6 +77,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         NombreModificar = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        DateModificar2 = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -92,7 +94,17 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Eliminar Pacientes ");
+        jLabel13.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel13AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
+        CedulaActualdelete.setToolTipText("ingrese la cedula del paciente a eliminar");
         CedulaActualdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualdeleteActionPerformed(evt);
@@ -112,6 +124,15 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel14.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Ingrese la cedula del paciente a eliminar");
+        jLabel14.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel14AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         delete.setBackground(new java.awt.Color(0, 255, 51));
         delete.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -166,17 +187,12 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
 
         jTabbedPane1.addTab("Eliminar Paciente", jPanel3);
 
-        NacimientoAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NacimientoAgregarActionPerformed(evt);
-            }
-        });
-
         cedula.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         cedula.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         cedula.setText("Cédula:");
         cedula.setToolTipText("");
 
+        NombreAgregar.setToolTipText("Ingrese su primer y segundo nombre");
         NombreAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreAgregarActionPerformed(evt);
@@ -191,12 +207,14 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Telefono:");
 
+        CorreoAgregar.setToolTipText("Ingrese la dirrecion de correo electronico");
         CorreoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CorreoAgregarActionPerformed(evt);
             }
         });
 
+        ApellidoAgregar.setToolTipText("Ingrese sus dos apellidos");
         ApellidoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ApellidoAgregarActionPerformed(evt);
@@ -221,6 +239,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Persona de Contacto:");
 
+        TelefonoAgregar.setToolTipText("Ingrese el numero telefonico personal");
         TelefonoAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoAgregarActionPerformed(evt);
@@ -235,6 +254,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Dirección:");
 
+        NumeroAgregar.setToolTipText("ingrese un Numero en caso de emergencia");
         NumeroAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumeroAgregarActionPerformed(evt);
@@ -245,6 +265,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         nombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         nombre.setText("Nombre:");
 
+        CedulaAgregar.setToolTipText("Cedula actual");
         CedulaAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaAgregarActionPerformed(evt);
@@ -265,12 +286,14 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Apellidos:");
 
+        DireccionAgregar.setToolTipText("Ingrese su dirrecion de residencia actual");
         DireccionAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DireccionAgregarActionPerformed(evt);
             }
         });
 
+        PersonaAgregar.setToolTipText("Nombre de persona en caso de emergencia");
         PersonaAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaAgregarActionPerformed(evt);
@@ -280,6 +303,8 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Fecha de nacimiento:");
+
+        DateAgregar2.setToolTipText("nn/mm/yyyy");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -299,10 +324,10 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                             .addComponent(nombre)
                             .addComponent(jLabel3)
                             .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CorreoAgregar)
-                            .addComponent(TelefonoAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                            .addComponent(TelefonoAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                             .addComponent(ApellidoAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(NombreAgregar, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(CedulaAgregar, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -319,9 +344,9 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                                 .addGap(6, 6, 6)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(DireccionAgregar, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NacimientoAgregar, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PersonaAgregar, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NumeroAgregar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(NumeroAgregar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(DateAgregar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(CancelarAgregar)
@@ -356,10 +381,10 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(DireccionAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(NacimientoAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
+                            .addComponent(DateAgregar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PersonaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -376,11 +401,12 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GuardarAgregar)
                     .addComponent(CancelarAgregar))
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Agregar Paciente", jPanel1);
 
+        DireccionModificar.setToolTipText("Ingrese la dirrecion a modificar");
         DireccionModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DireccionModificarActionPerformed(evt);
@@ -395,12 +421,14 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("Numero de emergencia");
 
+        NumeroModificar.setToolTipText("Ingrese numero de emergencia a modificar");
         NumeroModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumeroModificarActionPerformed(evt);
             }
         });
 
+        PersonaModificar.setToolTipText("Ingrese el nombre de la persona a modificar");
         PersonaModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PersonaModificarActionPerformed(evt);
@@ -438,24 +466,21 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel20.setText("Datos que desea modificar");
         jLabel20.setToolTipText("");
 
-        NacimientoModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NacimientoModificarActionPerformed(evt);
-            }
-        });
-
+        cedulaModificar.setToolTipText("Ingrese el numero de indentificacion");
         cedulaModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cedulaModificarActionPerformed(evt);
             }
         });
 
+        TelefonoModificar.setToolTipText("Ingrese el numero telefonico a modificar");
         TelefonoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoModificarActionPerformed(evt);
             }
         });
 
+        correoModificar.setToolTipText("Ingrese la dirrecion de correo electronico a modificar");
         correoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 correoModificarActionPerformed(evt);
@@ -481,12 +506,14 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("Correo:");
 
+        ApellidoModificar.setToolTipText("Ingrese los apellidos a modificar");
         ApellidoModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ApellidoModificarActionPerformed(evt);
             }
         });
 
+        NombreModificar.setToolTipText("Ingrese el nombre a modificar");
         NombreModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreModificarActionPerformed(evt);
@@ -501,6 +528,17 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel24.setText("Dirección:");
 
+        DateModificar2.setToolTipText("nn/mm/yyyy");
+        DateModificar2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                DateModificar2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -512,13 +550,8 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel21)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addGap(102, 102, 102)
-                                        .addComponent(jLabel20))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cedulaModificar))))
+                                .addGap(18, 18, 18)
+                                .addComponent(cedulaModificar))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -549,10 +582,10 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(PersonaModificar)
+                                    .addComponent(PersonaModificar, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                                     .addComponent(NumeroModificar, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(DireccionModificar, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(NacimientoModificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(DateModificar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(CancelarModificar)
@@ -560,7 +593,10 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                                 .addComponent(Modificar))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jLabel20)))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -572,22 +608,23 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cedulaModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(DireccionModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(NacimientoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(4, 4, 4)))
+                                        .addGap(4, 4, 4))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(DateModificar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -601,9 +638,11 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(80, 80, 80))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(NombreModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(NombreModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ApellidoModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -645,6 +684,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         });
 
         CedulaActualBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        CedulaActualBuscar.setToolTipText("Ingrese la cedula a buscar");
         CedulaActualBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualBuscarActionPerformed(evt);
@@ -715,7 +755,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -726,10 +766,6 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void NacimientoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NacimientoAgregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NacimientoAgregarActionPerformed
 
     private void NombreAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreAgregarActionPerformed
         // TODO add your handling code here:
@@ -745,6 +781,11 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
 
     private void GuardarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarAgregarActionPerformed
         boolean band = true;
+        String fecha = DateAgregar2.getDate().toString();
+        Date tempDate = DateAgregar2.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        fecha = sdf.format(tempDate);
+
         String[] data = new String[9];
         data[0] = CedulaAgregar.getText();
         data[1] = NombreAgregar.getText();
@@ -752,7 +793,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         data[3] = TelefonoAgregar.getText();
         data[4] = CorreoAgregar.getText();
         data[5] = DireccionAgregar.getText();
-        data[6] = NacimientoAgregar.getText();
+        data[6] = fecha;
         data[7] = PersonaAgregar.getText();
         data[8] = NumeroAgregar.getText();
         for (int i = 0; i < data.length; i++) {
@@ -776,7 +817,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         TelefonoAgregar.setText("");
         CorreoAgregar.setText("");
         DireccionAgregar.setText("");
-        NacimientoAgregar.setText("");
+        DateAgregar2.setDate(null);
         PersonaAgregar.setText("");
         NumeroAgregar.setText("");
     }
@@ -793,6 +834,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CedulaAgregarActionPerformed
 
     private void CancelarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarAgregarActionPerformed
+        clearFrm1();
         this.setVisible(false);
     }//GEN-LAST:event_CancelarAgregarActionPerformed
 
@@ -811,11 +853,17 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
             band = false;
         }
         if (band) {
-            String[] reponse = obj.buscar(Cedula);
-            JOptionPane.showMessageDialog(this, reponse);
+            String reponse = "Cedula: "+obj.buscar(Cedula).getCedula()+"\n"+
+                    "Nombre: "+obj.buscar(Cedula).getNombre()+"\n"+"Apellidos: "+obj.buscar(Cedula).getApellidos()+"\n"+
+                    "Telefono: "+obj.buscar(Cedula).getTelefono()+"\n"+ "Correo: "+obj.buscar(Cedula).getCorreo()+"\n"+
+                    "Direccion: "+obj.buscar(Cedula).getDireccion()+"\n"+"Fecha Nacimiento: "+obj.buscar(Cedula).getFechaNacimiento()+"\n"+
+                    "Persona en caso de emergencia: "+obj.buscar(Cedula).getPersonaContacto()+"\n"+"numero de emergencia: "+obj.buscar(Cedula).getNumeroContacto()+"\n";
+                    
+            JOptionPane.showMessageDialog(this,reponse);          
         } else {
-            JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Hay espacios vacios ");
         }
+        
         clearFrm2();
         this.setVisible(false);
     }//GEN-LAST:event_BuscarBuscarActionPerformed
@@ -827,19 +875,21 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CedulaActualBuscarActionPerformed
 
     private void CancelarBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBuscarActionPerformed
+        clearFrm2();
         this.setVisible(false);
     }//GEN-LAST:event_CancelarBuscarActionPerformed
 
     private void CedulaActualdeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaActualdeleteActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here://
     }//GEN-LAST:event_CedulaActualdeleteActionPerformed
 
     private void CancelardeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelardeleteActionPerformed
-        this.setVisible(false);
+        clearFrm3();
+        this.setVisible(false);//
     }//GEN-LAST:event_CancelardeleteActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        boolean band = true;
+        boolean band = true;//
         String Cedula = CedulaActualdelete.getText();
 
         if (Cedula.isBlank()) {
@@ -872,7 +922,15 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
     private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
         // TODO add your handling code here:
         boolean band = true;
+        String fecha2;
+        fecha2 = DateModificar2.getDate().toString();
+        Date tempDate = DateModificar2.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        fecha2 = sdf.format(tempDate);
+        
         String[] data = new String[8];
+        
+        
 
         String cedula = cedulaModificar.getText();
         data[0] = NombreModificar.getText();
@@ -880,7 +938,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         data[2] = TelefonoModificar.getText();
         data[3] = correoModificar.getText();
         data[4] = DireccionModificar.getText();
-        data[5] = NacimientoModificar.getText();
+        data[5] = fecha2;
         data[6] = PersonaModificar.getText();
         data[7] = NumeroModificar.getText();
 
@@ -906,14 +964,10 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
         TelefonoModificar.setText("");
         correoModificar.setText("");
         DireccionModificar.setText("");
-        NacimientoModificar.setText("");
+        DateModificar2.setDate(null);
         PersonaModificar.setText("");
         NumeroModificar.setText("");
     }
-    private void NacimientoModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NacimientoModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NacimientoModificarActionPerformed
-
     private void cedulaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaModificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cedulaModificarActionPerformed
@@ -928,6 +982,7 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
 
     private void CancelarModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarModificarActionPerformed
         // TODO add your handling code here:
+        clearFrm4();
         this.setVisible(false);
     }//GEN-LAST:event_CancelarModificarActionPerformed
 
@@ -938,6 +993,18 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
     private void NombreModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreModificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreModificarActionPerformed
+
+    private void jLabel14AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel14AncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_jLabel14AncestorAdded
+
+    private void jLabel13AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel13AncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_jLabel13AncestorAdded
+
+    private void DateModificar2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_DateModificar2AncestorAdded
+        // TODO add your handling code here://
+    }//GEN-LAST:event_DateModificar2AncestorAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -952,12 +1019,12 @@ public class FrmPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField CedulaActualdelete;
     private javax.swing.JTextField CedulaAgregar;
     private javax.swing.JTextField CorreoAgregar;
+    private com.toedter.calendar.JDateChooser DateAgregar2;
+    private com.toedter.calendar.JDateChooser DateModificar2;
     private javax.swing.JTextField DireccionAgregar;
     private javax.swing.JTextField DireccionModificar;
     private javax.swing.JButton GuardarAgregar;
     private javax.swing.JButton Modificar;
-    private javax.swing.JTextField NacimientoAgregar;
-    private javax.swing.JTextField NacimientoModificar;
     private javax.swing.JTextField NombreAgregar;
     private javax.swing.JTextField NombreModificar;
     private javax.swing.JTextField NumeroAgregar;

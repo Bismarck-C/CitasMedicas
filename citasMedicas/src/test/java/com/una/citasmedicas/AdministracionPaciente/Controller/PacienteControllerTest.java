@@ -48,14 +48,6 @@ public class PacienteControllerTest {
         assertEquals(expResult, result);
     }
 
-    @Test
-    public void testBuscar() throws Exception {
-        PacienteController instance = new PacienteController();
-        String id = "208310449";
-        String expResult = "208310449";
-        String[] result = instance.buscar(id);
-        assertEquals(expResult, result[0]);
-    }
 
     @Test
     public void testModificar() throws Exception {
@@ -65,16 +57,6 @@ public class PacienteControllerTest {
         String expResult = "Se modifico";
         String result = instance.modificar(data, cedula);
         assertEquals(expResult, result);
-    }
-
-    @Test
-    public void testRetornarnumCitas() throws Exception {
-        String cedula = "208310449";
-        PacienteController instance = new PacienteController();
-        String expResult = "1";
-        System.out.println("Informacion: "+instance.retornarnumCitas(cedula));
-        
-
     }
 
     @Test

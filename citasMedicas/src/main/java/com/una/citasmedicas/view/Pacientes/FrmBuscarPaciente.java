@@ -50,6 +50,7 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
         });
 
         CedulaActualBuscar.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        CedulaActualBuscar.setToolTipText("Agregue la cedula que quiere buscar");
         CedulaActualBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulaActualBuscarActionPerformed(evt);
@@ -114,23 +115,25 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BuscarBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarBuscarActionPerformed
-         boolean band = true;
+        boolean band = true;
         String Cedula = CedulaActualBuscar.getText();
-
         if (Cedula.isBlank()) {
             band = false;
         }
         if (band) {
-            String[] reponse = paciente.buscar(Cedula);
+            String reponse =  "Cedula: "+paciente.buscar(Cedula).getCedula()+"\n"+
+                    "Nombre: "+paciente.buscar(Cedula).getNombre()+"\n"+"Apellidos: "+paciente.buscar(Cedula).getApellidos()+"\n"+
+                    "Telefono: "+paciente.buscar(Cedula).getTelefono()+"\n"+ "Correo: "+paciente.buscar(Cedula).getCorreo()+"\n"+
+                    "Direccion: "+paciente.buscar(Cedula).getDireccion()+"\n"+"Fecha Nacimiento: "+paciente.buscar(Cedula).getFechaNacimiento()+"\n"+
+                    "Persona en caso de emergencia: "+paciente.buscar(Cedula).getPersonaContacto()+"\n"+"numero de emergencia: "+paciente.buscar(Cedula).getNumeroContacto()+"\n";
+
             JOptionPane.showMessageDialog(this, reponse);
         } else {
             JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
         clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_BuscarBuscarActionPerformed
-
     private void clearFrm() {
         CedulaActualBuscar.setText("");
     }
@@ -139,9 +142,9 @@ public class FrmBuscarPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CedulaActualBuscarActionPerformed
 
     private void CancelarBuscarbottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBuscarbottonActionPerformed
+         clearFrm();
         this.setVisible(false);
     }//GEN-LAST:event_CancelarBuscarbottonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarBuscar;
