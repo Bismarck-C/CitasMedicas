@@ -119,7 +119,6 @@ public class MDIMainUI extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JLabel();
         buttonUsuarios = new javax.swing.JButton();
         jLabelTitulo = new javax.swing.JLabel();
-        jLabelFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuMedicos = new javax.swing.JMenu();
         jMenuAgregar = new javax.swing.JMenu();
@@ -157,7 +156,7 @@ public class MDIMainUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        desktopPane.setBackground(new java.awt.Color(204, 204, 204));
+        desktopPane.setBackground(new java.awt.Color(7, 16, 25));
         desktopPane.setForeground(new java.awt.Color(255, 255, 255));
 
         txtMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
@@ -165,85 +164,76 @@ public class MDIMainUI extends javax.swing.JFrame {
         txtMedico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtMedico.setText("Medicos");
         desktopPane.add(txtMedico);
-        txtMedico.setBounds(490, 300, 100, 30);
+        txtMedico.setBounds(490, 340, 100, 30);
 
         buttonMedico.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         buttonMedico.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonMedico.setText("Medicos");
         buttonMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonMedicoActionPerformed(evt);
             }
         });
         desktopPane.add(buttonMedico);
-        buttonMedico.setBounds(450, 290, 180, 60);
+        buttonMedico.setBounds(450, 330, 180, 60);
 
         txtCitas.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         txtCitas.setForeground(new java.awt.Color(255, 255, 255));
         txtCitas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtCitas.setText("Citas");
         desktopPane.add(txtCitas);
-        txtCitas.setBounds(1260, 300, 100, 30);
+        txtCitas.setBounds(1230, 340, 100, 30);
 
         buttonCitas.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         buttonCitas.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonCitas.setText("Citas");
         buttonCitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCitasActionPerformed(evt);
             }
         });
         desktopPane.add(buttonCitas);
-        buttonCitas.setBounds(1220, 290, 180, 60);
+        buttonCitas.setBounds(1190, 330, 180, 60);
 
         txtPaciente.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         txtPaciente.setForeground(new java.awt.Color(255, 255, 255));
         txtPaciente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtPaciente.setText("Pacientes");
         desktopPane.add(txtPaciente);
-        txtPaciente.setBounds(760, 300, 100, 30);
+        txtPaciente.setBounds(740, 340, 100, 30);
 
         buttonPacientes.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         buttonPacientes.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonPacientes.setText("Pacientes");
         buttonPacientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPacientesActionPerformed(evt);
             }
         });
         desktopPane.add(buttonPacientes);
-        buttonPacientes.setBounds(720, 290, 180, 60);
+        buttonPacientes.setBounds(700, 330, 180, 60);
 
         txtUsuario.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
         txtUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtUsuario.setText("Usuarios");
+        txtUsuario.setText("Usuario");
         desktopPane.add(txtUsuario);
-        txtUsuario.setBounds(1000, 300, 100, 30);
+        txtUsuario.setBounds(990, 340, 100, 30);
 
         buttonUsuarios.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         buttonUsuarios.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\botonparamenu.jpg"));
-        buttonUsuarios.setText("Usuarios");
         buttonUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonUsuariosActionPerformed(evt);
             }
         });
         desktopPane.add(buttonUsuarios);
-        buttonUsuarios.setBounds(960, 290, 180, 60);
+        buttonUsuarios.setBounds(950, 330, 180, 60);
 
         jLabelTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelTitulo.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelTitulo.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Administración de modulos");
         desktopPane.add(jLabelTitulo);
-        jLabelTitulo.setBounds(820, 180, 230, 50);
-
-        jLabelFondo.setIcon(new javax.swing.ImageIcon("src\\main\\java\\com\\una\\citasmedicas\\image\\MdiWallpaper.jpg"));
-        jLabelFondo.setText("jLabelfondo");
-        desktopPane.add(jLabelFondo);
-        jLabelFondo.setBounds(0, 0, 1940, 1010);
+        jLabelTitulo.setBounds(690, 100, 470, 50);
 
         jMenuMedicos.setText("Medicos");
 
@@ -468,11 +458,11 @@ public class MDIMainUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1674, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1837, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
         );
 
         pack();
@@ -596,7 +586,6 @@ public class MDIMainUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonPacientes;
     private javax.swing.JButton buttonUsuarios;
     public static javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;

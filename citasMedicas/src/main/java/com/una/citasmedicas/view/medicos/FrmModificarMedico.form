@@ -62,9 +62,9 @@
                                   <Component id="txtTelefono" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtCorreo" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtDirec" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtFecha" max="32767" attributes="0"/>
                                   <Component id="txtEspecialidad" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtNombre" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="dateModificar" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -126,9 +126,9 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtFecha" min="-2" max="-2" attributes="0"/>
+                  <Component id="dateModificar" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                   <Component id="txtEspecialidad" min="-2" max="-2" attributes="0"/>
@@ -242,8 +242,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtCorreo">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtFecha">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -285,6 +283,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonMoficarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="dateModificar">
     </Component>
   </SubComponents>
 </Form>

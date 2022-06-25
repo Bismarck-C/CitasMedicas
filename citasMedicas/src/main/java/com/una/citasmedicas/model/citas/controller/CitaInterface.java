@@ -10,10 +10,9 @@ package com.una.citasmedicas.model.citas.controller;
  */
 public interface CitaInterface {
     public String agregar(String[] data);
-    public String[][] Citas()throws Exception;
-    public String nombrePaciente(String id)throws Exception;
-    public String nombreMedico(String id)throws Exception;
-    
+    public String[][] citas()throws Exception;
+    public String[][] buscarCitasPaciente(String cedula) throws Exception;
+    public boolean verificarFechasyHorasyCedula(String cedula,String fecha, String hora)throws Exception;
     
     
 }

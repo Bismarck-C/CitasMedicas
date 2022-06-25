@@ -70,17 +70,14 @@ public class CitaContainer extends XmlAdapter{
     }
     
     public ArrayList<Cita> mostrarCita() throws Exception{
-      ArrayList<Cita> array = new ArrayList<>();
-      
         DocumentBuilder builder=DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document doc=builder.parse(this.url);
         doc.getDocumentElement().normalize();
+        ArrayList<Cita> array = new ArrayList<>();
+        NodeList nodo = doc.getDocumentElement().getElementsByTagName("Cita");
         
-        String[] data = new String[5];
-        
-        NodeList nodo = doc.getElementsByTagName("Cita");
         for (int i = 0; i < nodo.getLength(); i++) {
-            
+            String[] data = new String[5];
             data[0] = nodo.item(i).getChildNodes().item(0).getTextContent();
             data[1] = nodo.item(i).getChildNodes().item(1).getTextContent();
             data[2] = nodo.item(i).getChildNodes().item(2).getTextContent();

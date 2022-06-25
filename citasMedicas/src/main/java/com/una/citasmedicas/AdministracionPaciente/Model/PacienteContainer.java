@@ -157,7 +157,7 @@ public class PacienteContainer extends XmlAdapter {
                 if (cantidadN == 5) {
                     bandera = false;
                 }
-                if ((cantidadN == 0) && (cantidadN <= 4)) {
+                if (cantidadN <= 4) {
                     cantidadN++;
                     cantidad = String.valueOf(cantidadN);
                     NodeList sumar = cita.getChildNodes();

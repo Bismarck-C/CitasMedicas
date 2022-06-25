@@ -388,7 +388,7 @@ public class FrmMedico extends javax.swing.JInternalFrame {
                         .addComponent(buttonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buttonCancelar)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,6 +493,15 @@ public class FrmMedico extends javax.swing.JInternalFrame {
 
             }
         ));
+        jTable3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jTable3AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         btnBuscar.setBackground(new java.awt.Color(0, 204, 204));
@@ -530,21 +539,21 @@ public class FrmMedico extends javax.swing.JInternalFrame {
                             .addComponent(jLabel13))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGap(230, 230, 230)
-                                    .addComponent(jLabel14)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(txtDireccionModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel15))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtEspecialidadModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(162, 162, 162)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel14)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtDireccionModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel15))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtEspecialidadModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(140, 140, 140)
                                 .addComponent(jLabel18))
@@ -561,9 +570,9 @@ public class FrmMedico extends javax.swing.JInternalFrame {
                         .addContainerGap()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 747, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(393, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -804,7 +813,7 @@ public class FrmMedico extends javax.swing.JInternalFrame {
     private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
         String cedula = txtBuscar.getText();
         Medico med = medico.find(cedula);
-        String[][] tabla = new String[1][7];
+        String[][] tabla = new String[1][8];
         if(med != null){
             tabla[0][0]= med.getCedula();
             tabla[0][1]= med.getNombre();
@@ -812,16 +821,18 @@ public class FrmMedico extends javax.swing.JInternalFrame {
             tabla[0][3]= med.getTelefono();
             tabla[0][4]= med.getCorreo();
             tabla[0][5]= med.getDireccion();
-            tabla[0][6]= med.getEspecialidad();
+            tabla[0][6] = med.getFechaNacimiento();
+            tabla[0][7]= med.getEspecialidad();
             
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro el medico");
         }
     
-        DefaultTableModel model = new DefaultTableModel(tabla, new String[]{"Cedula","Nombre","Apellido","Telefono","Email","Direccion","Especialidad"});
+        DefaultTableModel model = new DefaultTableModel(tabla, new String[]{"Cedula","Nombre","Apellido","Telefono","Email","Direccion","Fecha de Nacimiento","Especialidad"});
         jTable2.setModel(model);
+        cleanFrmBuscar();
     }//GEN-LAST:event_buttonBuscarActionPerformed
-    public void clearFrmBuscar(){
+    public void cleanFrmBuscar(){
         txtBuscar.setText("");
     }
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
@@ -894,7 +905,7 @@ public class FrmMedico extends javax.swing.JInternalFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         String cedula = txtCedulaModificar.getText();
         Medico med = medico.find(cedula);
-        String[][] tabla = new String[1][7];
+        String[][] tabla = new String[1][8];
         if(med != null){
             tabla[0][0]= med.getCedula();
             tabla[0][1]= med.getNombre();
@@ -902,16 +913,24 @@ public class FrmMedico extends javax.swing.JInternalFrame {
             tabla[0][3]= med.getTelefono();
             tabla[0][4]= med.getCorreo();
             tabla[0][5]= med.getDireccion();
-            tabla[0][6]= med.getEspecialidad();
+            tabla[0][6]= med.getFechaNacimiento();
+            tabla[0][7]= med.getEspecialidad();
             
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro el medico");
         }
     
-        DefaultTableModel model = new DefaultTableModel(tabla, new String[]{"Cedula","Nombre","Apellido","Telefono","Email","Direccion","Especialidad"});
+        DefaultTableModel model = new DefaultTableModel(tabla, new String[]{"Cedula","Nombre","Apellido","Telefono","Email","Direccion","Fecha de Nacimiento","Especialidad"});
         jTable3.setModel(model);
+        cleanBuscar();
     }//GEN-LAST:event_btnBuscarActionPerformed
 
+    private void jTable3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable3AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable3AncestorAdded
+    public void cleanBuscar(){
+        txtCedulaModificar.setText("");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CancelarAgregar;

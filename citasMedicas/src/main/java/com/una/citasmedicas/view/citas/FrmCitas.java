@@ -7,17 +7,23 @@ package com.una.citasmedicas.view.citas;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteController;
 import com.una.citasmedicas.AdministracionPaciente.Controller.PacienteInterface;
 import com.una.citasmedicas.AdministracionPaciente.Model.PacienteEntity;
-import com.una.citasmedicas.model.citas.Cita;
+
 import com.una.citasmedicas.model.citas.controller.CitaController;
 import com.una.citasmedicas.model.citas.controller.CitaInterface;
 import com.una.citasmedicas.model.controller.medico.MedicoController;
 import com.una.citasmedicas.model.controller.medico.MedicoInterface;
+
 import com.una.citasmedicas.view.MDIMainUI;
 import com.una.citasmedicas.view.Pacientes.FrmAgregarPaciente;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -41,6 +47,7 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         cita = new CitaController();
         initComponents();
         cargar();
+        
     }
 
     /**
@@ -52,14 +59,13 @@ public class FrmCitas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSeparator3 = new javax.swing.JSeparator();
         jLabelTitulo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtPaciente = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        btnBuscarPaciente = new javax.swing.JToggleButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -73,7 +79,7 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         jToggleButton2 = new javax.swing.JToggleButton();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableCitas = new javax.swing.JTable();
         txtNombre = new javax.swing.JLabel();
         txtMostrarNombre = new javax.swing.JTextField();
         txtMostrarCedula = new javax.swing.JTextField();
@@ -103,13 +109,13 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel4.setText("Cédula:");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jToggleButton1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Buscar");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscarPaciente.setBackground(new java.awt.Color(0, 204, 204));
+        btnBuscarPaciente.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        btnBuscarPaciente.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarPaciente.setText("Buscar");
+        btnBuscarPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                btnBuscarPacienteActionPerformed(evt);
             }
         });
 
@@ -157,18 +163,24 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel9.setText("Datos de su Cita");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableCitas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Numero de Cita", "Cedula de doctor", "Cedula del paciente", "Fecha"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jTableCitas.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jTableCitasAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jScrollPane1.setViewportView(jTableCitas);
 
         txtMostrarNombre.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         txtMostrarNombre.setForeground(new java.awt.Color(0, 0, 0));
@@ -252,7 +264,7 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnBuscarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton1)))
                         .addGap(18, 18, 18))
@@ -303,36 +315,38 @@ public class FrmCitas extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(405, 405, 405)
-                        .addComponent(jLabel9))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(485, 485, 485)
+                        .addComponent(jLabel9)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(138, 138, 138)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(442, 442, 442)
+                        .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(448, 448, 448))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(19, 19, 19)
                 .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
+                        .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1)
                                     .addComponent(jButton1)
-                                    .addComponent(jToggleButton1))
+                                    .addComponent(btnBuscarPaciente))
                                 .addGap(35, 35, 35)
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
@@ -348,7 +362,6 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                             .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel7)
                             .addComponent(jComboBoxMedicos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -377,23 +390,32 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void btnBuscarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPacienteActionPerformed
         String cedulaPaciente = txtPaciente.getText();
         PacienteEntity paci = paciente.buscar(cedulaPaciente);
         if(paci != null){
-            
            txtMostrarCedula.setText(paci.getCedula());
            txtMostrarNombre.setText(paci.getNombre());
-            
-        }else{
+            try {
+                Integer num = Integer.valueOf(paciente.retornarnumCitas(paci.getCedula()));
+                
+                if(num > 0){
+                     mostrarTablaCitas();
+                
+                }    
+                
+            } catch (Exception ex) {
+                Logger.getLogger(FrmCitas.class.getName()).log(Level.SEVERE, null, ex);
+            }
+       }else{
             int response = JOptionPane.showConfirmDialog(this, "No hay coincidenacias!, desea agregar el paciente?","Confirmar",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
             if(response == JOptionPane.YES_OPTION){
             MDIMainUI.desktopPane.add(frmPaciente);
@@ -405,14 +427,14 @@ public class FrmCitas extends javax.swing.JInternalFrame {
             }
         
         }
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_btnBuscarPacienteActionPerformed
 
     private void txtEspeMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEspeMedicoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEspeMedicoActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        boolean band = false;
+
         String fecha;
         fecha = dateCita.getDate().toString();
         Date tempDate = dateCita.getDate();
@@ -425,17 +447,54 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         String idPaciente = txtMostrarCedula.getText();
         String hora = jComboBox2.getSelectedItem().toString();
         
-        String[] data = {numCitas,idMedico,idPaciente,hora,fecha};
-       
-            String respuesta = cita.agregar(data);
-            JOptionPane.showMessageDialog(this, respuesta);
-            
-      
-            //JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
-        
+        try {
+            if(!cita.verificarFechasyHorasyCedula(idMedico,fecha, hora)){
+                Integer numeroCitas = Integer.parseInt(paciente.retornarnumCitas(idPaciente));
+                if(numeroCitas < 5){
+                    String[] data = {numCitas,idMedico,idPaciente,hora,fecha};
+                    String respuesta = cita.agregar(data);
+                    paciente.SumarUnaCita(idPaciente);
+                    JOptionPane.showMessageDialog(this, respuesta);
+                    mostrarTablaCitas();
+                    cleanRegitroCitas();
+                    
+                   
+                }else{
+                    JOptionPane.showMessageDialog(this, "Has alcanzado el numero maximo de citas!", "Error", JOptionPane.ERROR_MESSAGE);
+                
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "No hay cita disponible para esta fecha y hora!", "Error", JOptionPane.ERROR_MESSAGE);
+                
+                
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(FrmCitas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         
     }//GEN-LAST:event_jToggleButton2ActionPerformed
-
+    public void cleanRegitroCitas(){
+        txtIdMedico.setText("");
+        txtMostrarCedula.setText("");
+        dateCita.setDate(null);
+        txtMostrarCedula.setText("");
+        txtEspeMedico.setText("");
+        txtIdMedico.setText("");
+        txtMostrarNombre.setText("");
+        txtPaciente.setText("");
+    }
+    public void mostrarTablaCitas() throws Exception{
+        String cedula = txtMostrarCedula.getText();
+        String[][] datosCitas = cita.buscarCitasPaciente(cedula);   
+        
+        if(datosCitas != null){
+            DefaultTableModel model = new DefaultTableModel(datosCitas, new String[] {"Numero de Cita","Cedula medico","Hora","fecha"});
+            jTableCitas.setModel(model);
+        }
+        
+    
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -467,8 +526,13 @@ public class FrmCitas extends javax.swing.JInternalFrame {
         txtEspeMedico.setText(medico.find(cedula).getEspecialidad());
     }//GEN-LAST:event_btnConfirmarMedicoActionPerformed
 
+    private void jTableCitasAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTableCitasAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableCitasAncestorAdded
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btnBuscarPaciente;
     private javax.swing.JButton btnConfirmarMedico;
     private com.toedter.calendar.JDateChooser dateCita;
     private javax.swing.JButton jButton1;
@@ -489,10 +553,8 @@ public class FrmCitas extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTable jTableCitas;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JTextField txtEspeMedico;
     private javax.swing.JTextField txtIdMedico;

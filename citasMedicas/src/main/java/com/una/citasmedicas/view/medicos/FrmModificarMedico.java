@@ -6,6 +6,8 @@ package com.una.citasmedicas.view.medicos;
 
 import com.una.citasmedicas.model.controller.medico.MedicoController;
 import com.una.citasmedicas.model.controller.medico.MedicoInterface;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -47,11 +49,11 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
         txtTelefono = new javax.swing.JTextField();
         txtDirec = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
-        txtFecha = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         txtEspecialidad = new javax.swing.JTextField();
         botonCancelar = new javax.swing.JButton();
         botonMoficar = new javax.swing.JButton();
+        dateModificar = new com.toedter.calendar.JDateChooser();
 
         jLabel4.setText("jLabel4");
 
@@ -164,9 +166,9 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
                                     .addComponent(txtTelefono)
                                     .addComponent(txtCorreo)
                                     .addComponent(txtDirec)
-                                    .addComponent(txtFecha)
                                     .addComponent(txtEspecialidad)
-                                    .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(dateModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -213,7 +215,7 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
@@ -241,6 +243,11 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtEspecialidadActionPerformed
 
     private void botonMoficarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMoficarActionPerformed
+        String fecha = dateModificar.getDate().toString();
+        Date tempDate = dateModificar.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        fecha = sdf.format(tempDate);
+        fecha = sdf.format(tempDate);
         String[] data = new String[7];
         boolean band = true;
         String id= txtCedula.getText();
@@ -249,7 +256,7 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
         data[2] = txtTelefono.getText(); 
         data[3] = txtCorreo.getText(); 
         data[4] = txtDirec.getText(); 
-        data[5] = txtFecha.getText(); 
+        data[5] = fecha; 
         data[6] = txtEspecialidad.getText(); 
         for (String data1 : data) {
             if (data1.isEmpty()) {
@@ -276,7 +283,7 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
         txtTelefono.setText("");
         txtCorreo.setText("");
         txtDirec.setText("");
-        txtFecha.setText("");
+        dateModificar.setDate(null);
         txtEspecialidad.setText("");
     
     }
@@ -284,6 +291,7 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCancelar;
     private javax.swing.JButton botonMoficar;
+    private com.toedter.calendar.JDateChooser dateModificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -300,7 +308,6 @@ public class FrmModificarMedico extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDirec;
     private javax.swing.JTextField txtEspecialidad;
-    private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
