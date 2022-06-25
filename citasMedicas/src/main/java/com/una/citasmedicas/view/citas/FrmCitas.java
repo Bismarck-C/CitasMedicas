@@ -247,7 +247,7 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap(21, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel4))
@@ -265,8 +265,7 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                                 .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnBuscarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(177, 177, 177)
@@ -325,11 +324,13 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(138, 138, 138)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(442, 442, 442)
                         .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,7 +346,6 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1)
-                                    .addComponent(jButton1)
                                     .addComponent(btnBuscarPaciente))
                                 .addGap(35, 35, 35)
                                 .addComponent(jLabel2)
@@ -390,9 +390,15 @@ public class FrmCitas extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(53, 53, 53))))
         );
 
         pack();
@@ -434,43 +440,68 @@ public class FrmCitas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtEspeMedicoActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-
+        boolean band = true;
         String fecha;
         fecha = dateCita.getDate().toString();
         Date tempDate = dateCita.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         fecha = sdf.format(tempDate);
         
+        
         Integer nCita = (int)(Math.random()*100 + 1);
         String numCitas = String.valueOf(nCita);
         String idMedico = txtIdMedico.getText();
         String idPaciente = txtMostrarCedula.getText();
         String hora = jComboBox2.getSelectedItem().toString();
+       
+         String[] data1 = new String[8];
+        data1[0] = fecha;
+        data1[1] = numCitas;
+        data1[2] = idMedico;
+        data1[3] = idPaciente;
+        data1[4] = hora;
+        data1[5] = txtPaciente.getText();
+        data1[6] = txtMostrarNombre.getText();
+        data1[7] = txtEspeMedico.getText();
         
-        try {
-            if(!cita.verificarFechasyHorasyCedula(idMedico,fecha, hora)){
-                Integer numeroCitas = Integer.parseInt(paciente.retornarnumCitas(idPaciente));
-                if(numeroCitas < 5){
-                    String[] data = {numCitas,idMedico,idPaciente,hora,fecha};
-                    String respuesta = cita.agregar(data);
-                    paciente.SumarUnaCita(idPaciente);
-                    JOptionPane.showMessageDialog(this, respuesta);
-                    mostrarTablaCitas();
-                    cleanRegitroCitas();
-                    
-                   
-                }else{
-                    JOptionPane.showMessageDialog(this, "Has alcanzado el numero maximo de citas!", "Error", JOptionPane.ERROR_MESSAGE);
-                
-                }
-            }else{
-                JOptionPane.showMessageDialog(this, "No hay cita disponible para esta fecha y hora!", "Error", JOptionPane.ERROR_MESSAGE);
-                
-                
+        for (int i = 0; i < data1.length; i++) {
+            if (data1[i].isEmpty()) {
+                band = false;
             }
-        } catch (Exception ex) {
+        }
+        
+        if (band) {
+            try {
+                if(!cita.verificarFechasyHorasyCedula(idMedico,fecha, hora)){   
+                    Integer numeroCitas = Integer.parseInt(paciente.retornarnumCitas(idPaciente));
+                    if(numeroCitas < 5){
+                        String[] data = {numCitas,idMedico,idPaciente,hora,fecha};
+                        String respuesta = cita.agregar(data);
+                        paciente.SumarUnaCita(idPaciente);
+                        JOptionPane.showMessageDialog(this, respuesta);
+                        mostrarTablaCitas();
+                        cleanRegitroCitas();
+
+                   
+                    }else{
+                        JOptionPane.showMessageDialog(this, "Has alcanzado el numero maximo de citas!", "Error", JOptionPane.ERROR_MESSAGE);
+                
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(this, "No hay cita disponible para esta fecha y hora!", "Error", JOptionPane.ERROR_MESSAGE);
+                 }
+          }catch (Exception ex) {
             Logger.getLogger(FrmCitas.class.getName()).log(Level.SEVERE, null, ex);
         }
+            
+            
+           
+        } else {
+            JOptionPane.showMessageDialog(this, "Hay espacios vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+      
 
         
     }//GEN-LAST:event_jToggleButton2ActionPerformed
