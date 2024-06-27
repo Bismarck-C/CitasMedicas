@@ -12,7 +12,7 @@ JDOM para manipulación de XML
 
 ## Estructura del Proyecto
 
-/CitasMedicas
+# /CitasMedicas
 │
 ├── /src
 │   ├── /controller
@@ -42,3 +42,4 @@ JDOM para manipulación de XML
 │   └── README.md
 │
 └── pom.xml
+
